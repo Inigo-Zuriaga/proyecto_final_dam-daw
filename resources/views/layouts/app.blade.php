@@ -10,12 +10,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Noticias de Harry Potter') }}</title>
+    <title>{{ config('app.name', 'Crash Bandicoot Run!') }}</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/eca2f6d7a08be97ebbfb8a1c2c2be5e6?family=CCGeekSpeakW00-Regular" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
     <div class="nav-wrapper">
         <!--Logo-->
         <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
-            {{ Html::image('img/logo.svg', 'Logo Harry Potter') }}
+            {{ Html::image('img/logo.png', 'Logo Crash Bandicoot') }}
         </a>
 
         <!--Botón menú móviles-->

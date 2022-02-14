@@ -20,12 +20,12 @@ class CreateUsuariosTable extends Migration
             $table->string('password');
             $table->string('imagen', 64)->nullable();
             $table->dateTime('fecha_registro')->nullable();
-            $table->text('biografia')->nullable();
+            $table->text('biogafria')->nullable();
             $table->tinyInteger('activo')->nullable(false)->default(0);
             $table->tinyInteger('admin')->nullable(false)->default(0);
             $table->string('titulo_post', 32)->nullable(false)->default("");
-            $table->text('texto_post')->nullable()->default("");
-            $table->string('imagen_post', 64)->nullable()->default("");
+            $table->text('texto_post')->nullable();
+            $table->string('imagen_post', 64)->nullable();
             $table->tinyInteger('estado_post')->nullable(false)->default(0);
             $table->string('slug', 36)->nullable();
         });
