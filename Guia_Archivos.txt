@@ -16,7 +16,8 @@ GUIA ARCHIVOS
 
 -Archivo .env: Configuración de entorno.
 
--MySql:imporante!
+-MySql:
+imporante!
 BBDD: 'crash_run'
 Usuario: 'usuariofinal'
 Contraseña: 'Madrid01_'
