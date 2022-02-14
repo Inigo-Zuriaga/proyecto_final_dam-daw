@@ -65,9 +65,10 @@ header h2{
 }
 
 footer{
-    background-color: #333;
+    background: linear-gradient(to bottom,#024488,#08244c);
     color: white;
     padding: 1rem 0;
+
 }
 
 footer a{

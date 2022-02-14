@@ -90,6 +90,11 @@
     © <?php echo date("Y") ?>
     <a href="https://jairogarciarincon.com" target="_blank" title="Jairo García Rincón">
         Jairo García Rincón
+    </a><br>
+    <a href="http://www.pegi.info" class="brand-logo" target="_blank" title="Pegi">
+        {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
+    </a><a href="http://www.pegi.info" class="brand-logo" target="_blank" title="Pegi">
+        {{ Html::image('img/Unity.png', 'Logo Pegi 7') }}
     </a>
 </footer>
 
