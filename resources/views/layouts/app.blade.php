@@ -93,8 +93,15 @@
     </a><br>
     <a href="http://www.pegi.info" class="brand-logo" target="_blank" title="Pegi">
         {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
-    </a><a href="http://www.pegi.info" class="brand-logo" target="_blank" title="Pegi">
-        {{ Html::image('img/Unity.png', 'Logo Pegi 7') }}
+    </a>
+    <a href="https://unity.com/es" class="brand-logo" target="_blank" title="Unity">
+        {{ Html::image('img/Unity.png', 'Logo Unity') }}
+    </a>
+    <a href="https://materializecss.com/" class="brand-logo" target="_blank" title="Materialize">
+        {{ Html::image('img/materialize.png', 'Logo materialize') }}
+    </a>
+    <a href="https://unity.com/es" class="brand-logo" target="_blank" title="PhpStorm">
+        {{ Html::image('img/php.png', 'Logo Php') }}
     </a>
 </footer>
 
