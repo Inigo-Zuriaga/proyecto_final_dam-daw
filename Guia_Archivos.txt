@@ -25,3 +25,4 @@ Contraseña: 'Madrid01_'
 CREATE DATABASE crash_run CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE USER 'usuariofinal'@'localhost' IDENTIFIED BY 'Madrid01_';
 GRANT INSERT,SELECT,UPDATE,DELETE,CREATE,DROP,ALTER ON cms_laravel.* TO 'usuariofinal'@'localhost';
+
