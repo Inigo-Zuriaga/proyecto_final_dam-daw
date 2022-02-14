@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabladatosTable extends Migration
+class CreateDatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,22 @@ class CreateTabladatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tabladatos', function (Blueprint $table) {
-            //Opciones de tabla
+        Schema::create('datos', function (Blueprint $table) {
             $table->charset = 'utf8';
             $table->collation = 'utf8_unicode_ci';
 
             //Columnas
             $table->tinyIncrements('id_partida')->autoIncrement();
             $table->string('usuario', 32)->nullable(false);
-            $table->int('frutas',5)->nullable(false)->default(0);
-            $table->int('enemigos',5)->nullable(false)->default(0);
-            $table->int('ult_distancia',10)->nullable(false)->default(0);
+            $table->integer('frutas')->nullable(false)->default(0);
+            $table->integer('enemigos')->nullable(false)->default(0);
+            $table->integer('ult_distancia')->nullable(false)->default(0);
             $table->dateTime('fecha_record')->nullable();
-            $table->int('record',10)->nullable(false)->default(0);
+            $table->integer('record')->nullable(false)->default(0);
             $table->tinyInteger('numero_partidas',)->nullable(false)->default(0);
+
+            //Columnas created_at y updated_at
+            $table->timestamps();
         });
     }
 
@@ -37,6 +39,6 @@ class CreateTabladatosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabladatos');
+        Schema::dropIfExists('datos');
     }
 }
