@@ -41,25 +41,29 @@ nav{
     background: linear-gradient(to bottom,#024488,#08244c);
     box-shadow: none;
     -webkit-box-shadow: none;
-    padding: 0 2rem;
+    padding: 0 1rem;
     float: left;
     height: 100px;
 }
+.navderecha{
 
-a.acceder{
+}
+a.jugar{
     float: right;
     padding-top: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     background-image: url("http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png");
     background-size: contain;
-    width: 250px;
+    width: 175px;
     background-repeat: no-repeat;
-    background-position-y: 20px;
+    background-position-y: 30px;
     text-align: center;
 }
 nav ul a {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
+
+
 ul {
     padding-top: 1rem;
 }

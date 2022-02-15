@@ -20,6 +20,7 @@ Route::get('comojugar', [AppController::class, 'comojugar'])->name('comojugar');
 Route::get('equipo', [AppController::class, 'equipo'])->name('equipo');
 Route::get('foro', [AppController::class, 'foro'])->name('foro');
 Route::get('acercade', [AppController::class, 'acercade'])->name('acercade');
+Route::get('jugar', [AppController::class, 'jugar'])->name('jugar');
 
 //Back-end
 Route::get('admin', [AppController::class, 'index'])->name('admin');
