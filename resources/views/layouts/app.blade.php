@@ -37,10 +37,19 @@
                 <a href="{{ route('home') }}" title="Inicio">Inicio</a>
             </li>
             <li>
-                <a href="{{ route('noticias') }}" title="Noticias">Noticias</a>
+                <a href="{{ route('comojugar') }}" title="Como jugar">Cómo jugar</a>
             </li>
             <li>
-                <a href="{{ route('acerca-de') }}" title="Acerca de">Acerca de</a>
+                <a href="{{ route('foro') }}" title="Foro">Foro</a>
+            </li>
+            <li>
+                <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+            </li>
+            <li>
+                <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
+            </li>
+            <li>
+                <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
             </li>
             <li>
                 <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">
@@ -48,7 +57,6 @@
                 </a>
             </li>
         </ul>
-
     </div>
 </nav>
 
@@ -58,10 +66,19 @@
         <a href="{{ route('home') }}" title="Inicio">Inicio</a>
     </li>
     <li>
-        <a href="{{ route('noticias') }}" title="Noticias">Noticias</a>
+        <a href="{{ route('comojugar') }}" title="Como jugar">Cómo jugar</a>
     </li>
     <li>
-        <a href="{{ route('acerca-de') }}" title="Acerca de">Acerca de</a>
+        <a href="{{ route('foro') }}" title="Foro">Foro</a>
+    </li>
+    <li>
+        <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+    </li>
+    <li>
+        <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
+    </li>
+    <li>
+        <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
     </li>
     <li>
         <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">
@@ -95,7 +112,7 @@
             {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
         </a>
         <a href="https://unity.com/es" class="unity-class" target="_blank" title="Unity">
-            {{ Html::image('img/Unity.png', 'Logo Unity') }}
+            {{ Html::image('img/Unity.png', 'Logo Unity')}}
         </a>&nbsp &nbsp
         <a href="https://materializecss.com/" class="mate-class" target="_blank" title="Materialize">
             {{ Html::image('img/materialize.png', 'Logo materialize') }}

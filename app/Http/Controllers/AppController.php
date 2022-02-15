@@ -40,7 +40,7 @@ class AppController extends Controller
         //Obtengo los datos a mostrar en el listado de datos
         $rowset = Datos::where('activo', 1)->orderBy('fecha_record', 'DESC')->get();
 
-        return view('app.clasificaion',[
+        return view('app.clasificacion',[
             'rowset' => $rowset,
         ]);
     }
@@ -53,7 +53,7 @@ class AppController extends Controller
 
     public function acercade()
     {
-        return view('app.acerca-de');
+        return view('app.acercade');
     }
 
 

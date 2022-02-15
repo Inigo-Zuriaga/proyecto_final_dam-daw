@@ -15,11 +15,10 @@ use App\Http\Controllers\AppController;
 */
 
 Route::get('/', [AppController::class, 'index'])->name('home');
-Route::get('clasificacion', [AppController::class, 'noticias'])->name('noticias');
+Route::get('clasificacion', [AppController::class, 'clasificacion'])->name('clasificacion');
 Route::get('comojugar', [AppController::class, 'comojugar'])->name('comojugar');
 Route::get('equipo', [AppController::class, 'equipo'])->name('equipo');
 Route::get('foro', [AppController::class, 'foro'])->name('foro');
-Route::get('foro/{slug}', [AppController::class, 'foro'])->name('foro');
 Route::get('acercade', [AppController::class, 'acercade'])->name('acercade');
 
 //Back-end
