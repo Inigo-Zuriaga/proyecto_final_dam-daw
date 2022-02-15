@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
     <h3>
         <a href="{{ route('home') }}" title="Inicio">Inicio</a> <span>| Clasificacion</span>
     </h3>
@@ -33,7 +35,7 @@
                         <td>{{ $row->ult_distancia  }}m</td>
                         <td>{{ $row->numero_partidas  }}</td>
                         <td>{{ $row->record  }}</td>
-                        <td>{{ $row->fecha_record  }}</td>
+                        <td class="">{{ $row->fecha_record  }}</td>
                     </tr>
 
 
@@ -44,5 +46,15 @@
         </tbody>
             </table>
     </div>
+    <!--Paginación-->
+    <div class="row paginado">
+        {{ $rowset->links() }}
+    </div>
+
+
+
+
+
+
 
 @endsection

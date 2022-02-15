@@ -24,15 +24,17 @@
 <nav>
     <div class="nav-wrapper">
         <!--Logo-->
-        <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
-            {{ Html::image('img/logo.png', 'Logo Crash Bandicoot') }}
-        </a>
-
+        <div class="logo">
+            <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
+                {{ Html::image('img/Logo_Tab.png', 'Logo Crash Bandicoot') }}
+                {{ Html::image('img/logo.png', 'Logo Crash Bandicoot',['class'=>'logotxt']) }}
+            </a>
+        </div>
         <!--Botón menú móviles-->
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <!--Menú de navegación-->
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li>
                 <a href="{{ route('home') }}" title="Inicio">Inicio</a>
             </li>
@@ -51,14 +53,16 @@
             <li>
                 <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
             </li>
-            <li>
-                <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">
-                    Admin
-                </a>
-            </li>
         </ul>
+        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="acceder">
+            Acceder
+        </a>
+        <!-- style="background-image: url('http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png')" -->
     </div>
 </nav>
+<svg>
+    <polygon points="0,0 1920,0 1920,10 0,20" fill="#0081cc"/>
+</svg>
 
 <!--Menú de navegación móvil-->
 <ul class="sidenav" id="mobile-demo">
@@ -81,17 +85,13 @@
         <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
     </li>
     <li>
-        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">
-            Admin
-        </a>
+        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">Acceder</a>
     </li>
 </ul>
 
 <main>
 
     <header>
-        <h1>Mi primer CMS</h1>
-        <h2>con Laravel</h2>
     </header>
 
     <section class="container-fluid">
@@ -112,7 +112,7 @@
             {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
         </a>
         <a href="https://unity.com/es" class="unity-class" target="_blank" title="Unity">
-            {{ Html::image('img/Unity.png', 'Logo Unity')}}
+            {{ Html::image('img/Unity.png', 'Logo Unity', ['class'=> 'paco'])}}
         </a>&nbsp &nbsp
         <a href="https://materializecss.com/" class="mate-class" target="_blank" title="Materialize">
             {{ Html::image('img/materialize.png', 'Logo materialize') }}
@@ -120,7 +120,7 @@
         <a href="https://unity.com/es" class="php-class" target="_blank" title="PhpStorm">
             {{ Html::image('img/php.png', 'Logo Php') }}
         </a>
-        <p align="center" class="copy"><?php echo date("Y") ?> Activision Publishing Inc. ACTIVISION, CRASH TEAM RACING, CTR,
+        <p  class="copy"><?php echo date("Y") ?> Activision Publishing Inc. ACTIVISION, CRASH TEAM RACING, CTR,
             CRASH BANDICOOT CRASH y CRASH: ON THE RUN! son marcas comerciales de Activision Publishing, Inc.
             El icono de clasificación es una marca comercial de la Entertainment Software Association.
             El resto de marcas y nombres comerciales son propiedad de sus respectivos titulares.</p>

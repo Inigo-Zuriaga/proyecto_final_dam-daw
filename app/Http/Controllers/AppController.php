@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Datos;
 use App\Models\Usuarios;
+use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
@@ -38,10 +39,16 @@ class AppController extends Controller
         ]);
     }
 
-    public function clasificacion()
+    public function clasificacion(Request $request)
     {
+        //Página a mostrar
+        $pagina = ($request->pagina) ? $request->pagina : 1;
+
         //Obtengo los datos a mostrar en el listado de datos
-        $rowset = Datos::orderBy('fecha_record', 'DESC')->get();
+        $rowset = Datos::orderBy('record', 'DESC')->paginate(10,['*'],'pagina',$pagina);
+
+
+
         //Obtengo los datos a mostrar en el listado de datos
         $rowset2 = Usuarios::orderBy('fecha_registro', 'DESC')->get();
         return view('app.clasificacion',[
