@@ -45,9 +45,34 @@ nav{
     float: left;
     height: 100px;
 }
+
+a.acceder{
+    float: right;
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    background-image: url("http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png");
+    background-size: contain;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    text-align: center;
+}
+nav ul a {
+    font-size: 1.25rem;
+}
+ul {
+    padding-top: 1rem;
+}
 .logo img{
     width: 280px;
     height: 140px;
+}
+img.logotxt{
+    position: absolute;
+    left: 25px;
+    width: 220px;
+    height: 90px;
+    top: 10px;
 }
 
 main {
@@ -56,16 +81,6 @@ main {
     max-width: 1920px;
     padding: 0 2rem;
     margin: 0 auto;
-}
-
-header h1{
-    font-size: 3rem;
-    margin: 1rem 0 0 0;
-}
-
-header h2{
-    font-size: 2rem;
-    margin: 1rem 0;
 }
 
 footer{
@@ -94,6 +109,9 @@ footer p {
     font-size: 13px;
     text-align: justify;
 }
+
+/* LAYOUT *************************************************************************************************************/
+
 
 
 

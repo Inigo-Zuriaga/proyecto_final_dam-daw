@@ -27,6 +27,7 @@
         <div class="logo">
             <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
                 {{ Html::image('img/Logo_Tab.png', 'Logo Crash Bandicoot') }}
+                {{ Html::image('img/logo.png', 'Logo Crash Bandicoot',['class'=>'logotxt']) }}
             </a>
         </div>
         <!--Botón menú móviles-->
@@ -53,9 +54,10 @@
                 <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
             </li>
         </ul>
-        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank">
-            {{ Html::image('img/btAceder.png', 'Boton acceder' ,['style'=>'width:150px;padding-top:0.5rem;float:right']) }}
+        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="acceder">
+            Acceder
         </a>
+        <!-- style="background-image: url('http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png')" -->
     </div>
 </nav>
 <svg>
@@ -90,8 +92,6 @@
 <main>
 
     <header>
-        <h1>Mi primer CMS</h1>
-        <h2>con Laravel</h2>
     </header>
 
     <section class="container-fluid">
@@ -120,7 +120,7 @@
         <a href="https://unity.com/es" class="php-class" target="_blank" title="PhpStorm">
             {{ Html::image('img/php.png', 'Logo Php') }}
         </a>
-        <p align="center" class="copy"><?php echo date("Y") ?> Activision Publishing Inc. ACTIVISION, CRASH TEAM RACING, CTR,
+        <p  class="copy"><?php echo date("Y") ?> Activision Publishing Inc. ACTIVISION, CRASH TEAM RACING, CTR,
             CRASH BANDICOOT CRASH y CRASH: ON THE RUN! son marcas comerciales de Activision Publishing, Inc.
             El icono de clasificación es una marca comercial de la Entertainment Software Association.
             El resto de marcas y nombres comerciales son propiedad de sus respectivos titulares.</p>
