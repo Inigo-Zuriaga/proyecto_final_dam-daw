@@ -24,15 +24,16 @@
 <nav>
     <div class="nav-wrapper">
         <!--Logo-->
-        <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
-            {{ Html::image('img/logo.png', 'Logo Crash Bandicoot') }}
-        </a>
-
+        <div class="logo">
+            <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
+                {{ Html::image('img/Logo_Tab.png', 'Logo Crash Bandicoot') }}
+            </a>
+        </div>
         <!--Botón menú móviles-->
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <!--Menú de navegación-->
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li>
                 <a href="{{ route('home') }}" title="Inicio">Inicio</a>
             </li>
@@ -51,14 +52,15 @@
             <li>
                 <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
             </li>
-            <li>
-                <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">
-                    Admin
-                </a>
-            </li>
         </ul>
+        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank">
+            {{ Html::image('img/btAceder.png', 'Boton acceder' ,['style'=>'width:150px;padding-top:0.5rem;float:right']) }}
+        </a>
     </div>
 </nav>
+<svg>
+    <polygon points="0,0 1920,0 1920,10 0,20" fill="#0081cc"/>
+</svg>
 
 <!--Menú de navegación móvil-->
 <ul class="sidenav" id="mobile-demo">
@@ -81,9 +83,7 @@
         <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
     </li>
     <li>
-        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">
-            Admin
-        </a>
+        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">Acceder</a>
     </li>
 </ul>
 
