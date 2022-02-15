@@ -28,6 +28,7 @@ class CreateUsuariosTable extends Migration
             $table->string('imagen_post', 64)->nullable();
             $table->tinyInteger('estado_post')->nullable(false)->default(0);
             $table->string('slug', 36)->nullable();
+            $table->dateTime('fecha_post')->nullable();
         });
     }
 
