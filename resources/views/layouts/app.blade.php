@@ -87,22 +87,27 @@
 </main>
 
 <footer class="center-align">
-    © <?php echo date("Y") ?>
-    <a href="https://jairogarciarincon.com" target="_blank" title="Jairo García Rincón">
-        Jairo García Rincón
-    </a><br>
-    <a href="http://www.pegi.info" class="brand-logo" target="_blank" title="Pegi">
-        {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
-    </a>
-    <a href="https://unity.com/es" class="brand-logo" target="_blank" title="Unity">
-        {{ Html::image('img/Unity.png', 'Logo Unity') }}
-    </a>
-    <a href="https://materializecss.com/" class="brand-logo" target="_blank" title="Materialize">
-        {{ Html::image('img/materialize.png', 'Logo materialize') }}
-    </a>
-    <a href="https://unity.com/es" class="brand-logo" target="_blank" title="PhpStorm">
-        {{ Html::image('img/php.png', 'Logo Php') }}
-    </a>
+    <svg>
+        <polygon points="0,0 1920,0 1920,10 0,25" fill="#0081cc"/>
+    </svg>
+    <div class="contenido">
+        <a href="http://www.pegi.info" class="pegi"  target="_blank" title="Pegi">
+            {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
+        </a>
+        <a href="https://unity.com/es" class="unity-class" target="_blank" title="Unity">
+            {{ Html::image('img/Unity.png', 'Logo Unity') }}
+        </a>&nbsp &nbsp
+        <a href="https://materializecss.com/" class="mate-class" target="_blank" title="Materialize">
+            {{ Html::image('img/materialize.png', 'Logo materialize') }}
+        </a>
+        <a href="https://unity.com/es" class="php-class" target="_blank" title="PhpStorm">
+            {{ Html::image('img/php.png', 'Logo Php') }}
+        </a>
+        <p align="center" class="copy"><?php echo date("Y") ?> Activision Publishing Inc. ACTIVISION, CRASH TEAM RACING, CTR,
+            CRASH BANDICOOT CRASH y CRASH: ON THE RUN! son marcas comerciales de Activision Publishing, Inc.
+            El icono de clasificación es una marca comercial de la Entertainment Software Association.
+            El resto de marcas y nombres comerciales son propiedad de sus respectivos titulares.</p>
+    </div>
 </footer>
 
 </body>
