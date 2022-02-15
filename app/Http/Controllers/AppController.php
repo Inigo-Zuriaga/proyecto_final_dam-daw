@@ -26,6 +26,15 @@ class AppController extends Controller
         ]);
     }
 
+    public function hilo($slug)
+    {
+        $row = Usuarios::where('estado_post', 1)->where('slug',$slug)->get();
+
+        return view('app.hilo',[
+            'row' => $row,
+        ]);
+    }
+
     public function clasificacion()
     {
         //Obtengo los datos a mostrar en el listado de datos

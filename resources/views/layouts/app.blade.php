@@ -95,7 +95,7 @@
             {{ Html::image('img/PEGI-7.png', 'Logo Pegi 7') }}
         </a>
         <a href="https://unity.com/es" class="unity-class" target="_blank" title="Unity">
-            {{ Html::image('img/Unity.png', 'Logo Unity') }}
+            {{ Html::image('img/Unity.png', 'Logo Unity'}}
         </a>&nbsp &nbsp
         <a href="https://materializecss.com/" class="mate-class" target="_blank" title="Materialize">
             {{ Html::image('img/materialize.png', 'Logo materialize') }}
