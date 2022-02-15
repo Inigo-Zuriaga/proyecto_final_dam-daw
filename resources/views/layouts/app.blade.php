@@ -54,9 +54,11 @@
                 <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
             </li>
         </ul>
-        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="acceder">
-            Acceder
-        </a>
+        <div class="navderecha">
+            <a href="{{ route('jugar') }}" title="Panel de administración" target="_blank" class="jugar">
+                Jugar
+            </a>
+        </div>
         <!-- style="background-image: url('http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png')" -->
     </div>
 </nav>
