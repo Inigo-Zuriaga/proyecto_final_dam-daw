@@ -5,14 +5,14 @@
     font-family: CCGeekSpeak;
     src: url(//db.onlinewebfonts.com/c/eca2f6d7a08be97ebbfb8a1c2c2be5e6?family=CCGeekSpeakW00-Regular);
 }
-/*@font-face {font-family: "CCGeekSpeak W00 Regular";
+@font-face {font-family: "CCGeekSpeak W00 Regular";
     src: url("fonts/@font-face/eca2f6d7a08be97ebbfb8a1c2c2be5e6.eot");
     src: url("fonts/@font-face/eca2f6d7a08be97ebbfb8a1c2c2be5e6.eot?#iefix") format("embedded-opentype"),
     url("fonts/@font-face/eca2f6d7a08be97ebbfb8a1c2c2be5e6.woff2") format("woff2"),
     url("fonts/@font-face/eca2f6d7a08be97ebbfb8a1c2c2be5e6.woff") format("woff"),
     url("fonts/@font-face/eca2f6d7a08be97ebbfb8a1c2c2be5e6.ttf") format("truetype"),
     url("fonts/@font-face/eca2f6d7a08be97ebbfb8a1c2c2be5e6.svg#CCGeekSpeak W00 Regular") format("svg");
-}*/
+}
 html{
     color: #333;
     font-family:"CCGeekSpeak W00 Regular" !important;
