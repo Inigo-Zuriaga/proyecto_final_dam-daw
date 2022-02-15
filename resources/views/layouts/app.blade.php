@@ -58,6 +58,9 @@
             <a href="{{ route('jugar') }}" title="Panel de administración" target="_blank" class="jugar">
                 Jugar
             </a>
+            <a href="{{ route('jugar') }}" title="Panel de administración" target="_blank" class="acceder">
+                Acceder
+            </a>
         </div>
         <!-- style="background-image: url('http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png')" -->
     </div>

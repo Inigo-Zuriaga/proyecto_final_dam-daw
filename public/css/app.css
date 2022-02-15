@@ -50,19 +50,19 @@ nav{
 }
 a.jugar{
     float: right;
-    padding-top: 1rem;
+    padding-top: 20px;
+    margin-right: 50px;
     font-size: 1.15rem;
-    background-image: url("http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png");
+    background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png);
     background-size: contain;
-    width: 175px;
+    width: 215px;
     background-repeat: no-repeat;
-    background-position-y: 30px;
+    background-position-y: 25px;
     text-align: center;
 }
 nav ul a {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
 }
-
 
 ul {
     padding-top: 1rem;

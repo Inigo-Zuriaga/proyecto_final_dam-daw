@@ -34,7 +34,7 @@
                         <td>{{ $row->enemigos  }}</td>
                         <td>{{ $row->ult_distancia  }}m</td>
                         <td>{{ $row->numero_partidas  }}</td>
-                        <td>{{ $row->record  }}</td>
+                        <td>{{ $row->record  }}m</td>
                         <td class="">{{ $row->fecha_record  }}</td>
                     </tr>
 
