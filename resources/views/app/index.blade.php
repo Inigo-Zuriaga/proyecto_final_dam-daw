@@ -5,7 +5,7 @@
 
 <section class="cabecera">
     <div class="video">
-        <video height="875" loop autoplay>
+        <video height="775" loop autoplay>
             <source src="{{asset('img/gameplay.mp4')}}" type="video/mp4">
         </video>
     </div>
