@@ -8,9 +8,9 @@
         <a href="{{ route('home') }}" title="Inicio">Inicio</a> <span>| Clasificacion</span>
     </h3>
     <div class="row">
-        @foreach ($rowset2 as $row)
 
-        @endforeach
+        @foreach ($rowset2 as $row) @endforeach
+
             <table class="striped centered">
                 <thead>
                 <tr>
@@ -37,10 +37,6 @@
                         <td>{{ $row->record  }}m</td>
                         <td class="">{{ $row->fecha_record  }}</td>
                     </tr>
-
-
-
-
 
         @endforeach
         </tbody>

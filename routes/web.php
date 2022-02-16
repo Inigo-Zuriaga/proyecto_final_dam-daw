@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +24,14 @@ Route::get('equipo', [AppController::class, 'equipo'])->name('equipo');
 Route::get('foro', [AppController::class, 'foro'])->name('foro');
 Route::get('acercade', [AppController::class, 'acercade'])->name('acercade');
 Route::get('jugar', [AppController::class, 'jugar'])->name('jugar');
-Route::get('acceder', [AppController::class, 'acceder'])->name('acceder');
+
 
 //Back-end
-Route::get('admin', [AppController::class, 'index'])->name('admin');
+Route::get('admin', [AdminController::class, 'index'])->name('admin');
 
+//Auth
+Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');
 
 //Usuarios
-Route::get('admin/usuarios', [UsuarioController::class, 'index'])->middleware('role:usuarios');
+Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:usuarios');
+
