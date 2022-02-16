@@ -59,6 +59,14 @@ class AppController extends Controller
 
     }
 
+    public function acceder()
+    {
+        return view('app.equipo');
+    }
+    public function jugar()
+    {
+        return view('app.equipo');
+    }
 
     public function equipo()
     {
