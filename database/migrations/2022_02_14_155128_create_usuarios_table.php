@@ -20,7 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('password');
             $table->string('imagen', 64)->nullable();
             $table->dateTime('fecha_registro')->nullable();
-            $table->text('biogafria')->nullable();
+            $table->text('biografia')->nullable();
             $table->tinyInteger('activo')->nullable(false)->default(0);
             $table->tinyInteger('admin')->nullable(false)->default(0);
             $table->string('titulo_post', 32)->nullable(false)->default("");

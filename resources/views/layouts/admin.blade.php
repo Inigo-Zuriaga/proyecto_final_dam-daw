@@ -22,33 +22,48 @@
 
 <nav>
     <div class="nav-wrapper">
+        <!--Logo-->
+        <div class="logo">
+            <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
+                {{ Html::image('img/Logo_Tab.png', 'Logo Crash Bandicoot') }}
+                <span class="run">run</span>
+                {{ Html::image('img/logo.png', 'Logo Crash Bandicoot',['class'=>'logotxt']) }}
+
+            </a>
+        </div>
         <!--Botón menú móviles-->
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-    @if( Auth::check() )
         <!--Menú de navegación-->
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href="{{ route('admin') }}" title="Inicio">Inicio</a>
-                </li>
-                @if( Auth::user()->usuarios )
-                    <li>
-                        <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
-                    </li>
-                @endif
-                <li>
-                    <form method="POST" action="{{ route('salir') }}">
-                        @csrf
-                        <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text">
-                            Salir
-                        </a>
-                    </form>
-                </li>
-            </ul>
-        @endif
-
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+                <a href="{{ route('home') }}" title="Inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="{{ route('comojugar') }}" title="Como jugar">Cómo jugar</a>
+            </li>
+            <li>
+                <a href="{{ route('foro') }}" title="Foro">Foro</a>
+            </li>
+            <li>
+                <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+            </li>
+            <li>
+                <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
+            </li>
+            <li>
+                <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
+            </li>
+        </ul>
+        <div class="navderecha">
+            <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugar">Jugar</a>
+            <a href="{{ route('admin') }}" title="Acceder" target="_blank" class="acceder">Acceder</a>
+        </div>
     </div>
 </nav>
+<svg>
+    <polygon points="0,0 1920,0 1920,10 0,20" fill="#0081cc"/>
+</svg>
 
 @if( Auth::check() )
     <!--Menú de navegación móvil-->
@@ -62,7 +77,7 @@
             </li>
         @endif
         <li>
-            <form method="POST" action="{{ route('salir') }}">
+            <form method="POST" action="">
                 @csrf
                 <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text">
                     Salir
@@ -75,7 +90,23 @@
 <!-- Mensajes  -->
 @include('admin.partials.mensajes')
 
-<main>
+<!--<div class="col s12 m7">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+<main class="iniciosesion">
 
     <header>
         <h1>Panel de administración</h1>
@@ -106,7 +137,7 @@
 <footer class="center-align">
     © <?php echo date("Y") ?> Panel de Administración.
     <a href="https://jairogarciarincon.com" target="_blank" title="Jairo García Rincón">
-        Jairo García Rincón
+        Crash Bandicoot
     </a>
 </footer>
 

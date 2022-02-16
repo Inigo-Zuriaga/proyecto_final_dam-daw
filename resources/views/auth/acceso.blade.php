@@ -21,7 +21,7 @@
                             <i class="material-icons right">help</i>
                         </button>
                     </a>
-                    <a href="" title="Registrarse">
+                    <a href="{{ route('registro') }}" title="Registrarse">
                         <button class="btn waves-effect waves-light" type="button">Registrarse
                             <i class="material-icons right">person_add</i>
                         </button>
