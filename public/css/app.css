@@ -48,7 +48,7 @@ nav{
 .navderecha{
 
 }
-a.jugar{
+a.jugar, a.acceder{
     float: right;
     padding-top: 20px;
     margin-right: 50px;
@@ -60,6 +60,16 @@ a.jugar{
     background-position-y: 25px;
     text-align: center;
 }
+a.acceder{
+    filter: hue-rotate(275deg)
+}
+span.run{
+    margin-left: -175px;
+    margin-top: 80px;
+    position: absolute;
+    font-size: 1.75rem;
+}
+
 nav ul a {
     font-size: 1.25rem;
 }
@@ -160,6 +170,27 @@ article .card-info{
     box-shadow: none;
     -webkit-box-shadow: none;
 
+}
+
+section.cabecera{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 850px;
+}
+.video{
+    margin-top: -40px;
+    margin-left: 130px;
+    margin-right: auto;
+    position: absolute;
+}
+.jugarya{
+    display: flex;
+    height: 42vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
 }
 
 

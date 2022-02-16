@@ -27,7 +27,9 @@
         <div class="logo">
             <a href="{{ route('home') }}" class="brand-logo" title="Inicio">
                 {{ Html::image('img/Logo_Tab.png', 'Logo Crash Bandicoot') }}
+                <span class="run">run</span>
                 {{ Html::image('img/logo.png', 'Logo Crash Bandicoot',['class'=>'logotxt']) }}
+
             </a>
         </div>
         <!--Botón menú móviles-->
@@ -62,7 +64,6 @@
                 Acceder
             </a>
         </div>
-        <!-- style="background-image: url('http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png')" -->
     </div>
 </nav>
 <svg>
