@@ -60,7 +60,7 @@
             <a href="{{ route('jugar') }}" title="Panel de administración" target="_blank" class="jugar">
                 Jugar
             </a>
-            <a href="{{ route('jugar') }}" title="Panel de administración" target="_blank" class="acceder">
+            <a href="{{ route('acceder') }}" title="Panel de administración" target="_blank" class="acceder">
                 Acceder
             </a>
         </div>
