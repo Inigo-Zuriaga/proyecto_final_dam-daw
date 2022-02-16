@@ -57,12 +57,8 @@
             </li>
         </ul>
         <div class="navderecha">
-            <a href="{{ route('jugar') }}" title="Panel de administración" target="_blank" class="jugar">
-                Jugar
-            </a>
-            <a href="{{ route('acceder') }}" title="Panel de administración" target="_blank" class="acceder">
-                Acceder
-            </a>
+            <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugar">Jugar</a>
+            <a href="{{ route('admin') }}" title="Acceder" target="_blank" class="acceder">Acceder</a>
         </div>
     </div>
 </nav>
@@ -91,7 +87,10 @@
         <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
     </li>
     <li>
-        <a href="{{ route('admin') }}" title="Panel de administración" target="_blank" class="grey-text">Acceder</a>
+        <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugar">Jugar</a>
+    </li>
+    <li>
+        <a href="{{ route('acceder') }}" title="Acceder" target="_blank" class="acceder">Acceder</a>
     </li>
 </ul>
 

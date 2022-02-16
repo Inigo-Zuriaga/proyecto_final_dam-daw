@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class AdminController
+class AdminController extends Controller
 {
     public function __construct()
     {

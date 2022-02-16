@@ -25,3 +25,7 @@ Route::get('acceder', [AppController::class, 'acceder'])->name('acceder');
 
 //Back-end
 Route::get('admin', [AppController::class, 'index'])->name('admin');
+
+
+//Usuarios
+Route::get('admin/usuarios', [UsuarioController::class, 'index'])->middleware('role:usuarios');

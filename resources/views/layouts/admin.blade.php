@@ -22,10 +22,6 @@
 
 <nav>
     <div class="nav-wrapper">
-        <!--Logo-->
-        <a href="{{ route('acceder') }}" class="brand-logo" title="Inicio">
-            {{ Html::image('img/logo.svg', 'Logo Harry Potter') }}
-        </a>
 
         <!--Botón menú móviles-->
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -36,11 +32,6 @@
                 <li>
                     <a href="{{ route('admin') }}" title="Inicio">Inicio</a>
                 </li>
-                @if( Auth::user()->noticias )
-                    <li>
-                        <a href="{{ url('admin/noticias') }}" title="Noticias">Noticias</a>
-                    </li>
-                @endif
                 @if( Auth::user()->usuarios )
                     <li>
                         <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
@@ -66,11 +57,6 @@
         <li>
             <a href="{{ route('admin') }}" title="Inicio">Inicio</a>
         </li>
-        @if( Auth::user()->noticias )
-            <li>
-                <a href="{{ url('admin/noticias') }}" title="Noticias">Noticias</a>
-            </li>
-        @endif
         @if( Auth::user()->usuarios )
             <li>
                 <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
@@ -98,7 +84,7 @@
         @if( Auth::check() )
 
             <h2>
-                Usuario: <strong>{{Auth::user()->nombre}}</strong>
+                Usuario: <strong>{{Auth::user()->usuario}}</strong>
             </h2>
 
         @else
