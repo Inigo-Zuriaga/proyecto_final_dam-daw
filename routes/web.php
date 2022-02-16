@@ -31,6 +31,7 @@ Route::get('admin', [AdminController::class, 'index'])->name('admin');
 
 //Auth
 Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');
+Route::post('autenticar', [AuthController::class, 'autenticar'])->name('autenticar');
 
 //Usuarios
 Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:usuarios');

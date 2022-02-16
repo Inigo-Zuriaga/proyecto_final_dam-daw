@@ -48,14 +48,12 @@ class AppController extends Controller
         $rowset = Datos::orderBy('record', 'DESC')->paginate(10,['*'],'pagina',$pagina);
 
 
-
         //Obtengo los datos a mostrar en el listado de datos
         $rowset2 = Usuarios::orderBy('fecha_registro', 'DESC')->get();
         return view('app.clasificacion',[
             'rowset' => $rowset,
             'rowset2' => $rowset2,
         ]);
-
 
     }
 
