@@ -216,15 +216,22 @@ main.iniciosesion{
     margin-top: -40px;
 }
 
-.cajita{
+.cajita,.cajita2{
     width: 35%;
     background-color: #0000007a;
     text-align: center;
-    margin-top: 130px;
+    border-radius: 15px;
 }
-.cajita h2{
+.cajita h2,.cajita2 h2{
     font-size: 3rem;
+}
+.cajita2{
 
+    margin-top: 75px;
+}
+.cajita{
+
+    margin-top: 130px;
 }
 .row .col.s12 {
     width: 85%;
@@ -236,7 +243,7 @@ main.iniciosesion{
     left: 4.75rem;
     text-align: center;
 }
-.orange{
+.btn:hover{
     background: linear-gradient(15deg, #ffea00, #ff401a);
 }
 a.crearcuenta{
@@ -258,4 +265,8 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label,input[type=pa
 input[type=text]:not(.browser-default){
     font-size: 24px;
 }
+.btn-large {
+    padding: 0 36px;
+}
+
 

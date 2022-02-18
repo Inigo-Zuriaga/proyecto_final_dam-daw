@@ -25,7 +25,9 @@ html{
     line-height: 26px;
     letter-spacing: 0.43px;
     text-shadow: #000000 -2px 3px 0px, #000000 -1px -1px 0px, #000000 1px -1px 0px, #000000 -1px 1px 0px, #000000 1px 1px 0px;
-
+    background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/fondo.png);
+    background-size: 125%;
+    background-position-y: -490px;
 }
 
 body{
@@ -53,13 +55,16 @@ a.jugar, a.acceder{
     padding-top: 20px;
     margin-right: 50px;
     font-size: 1.15rem;
-    background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png);
-    background-size: contain;
     width: 215px;
-    background-repeat: no-repeat;
     background-position-y: 25px;
     text-align: center;
 }
+a.jugar, a.acceder, a.jugargratis{
+    background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 a.acceder{
     filter: hue-rotate(275deg)
 }
@@ -95,6 +100,9 @@ main {
     max-width: 1920px;
     padding: 0 2rem;
     margin: 0 auto;
+    background-size: 1920px 1297px;
+    background-repeat: no-repeat;
+    background-position-y: -190px;
 }
 
 footer{
@@ -133,7 +141,6 @@ footer p {
 
 section h3{
     font-size: 1.5rem;
-    border-bottom: 1px solid #333;
     padding-bottom: 0.3rem;
     font-weight:bold;
 }
@@ -172,6 +179,7 @@ article .card-info{
 
 }
 
+/*INICIO***********************************/
 section.cabecera{
     position: relative;
     display: inline-block;
@@ -186,16 +194,63 @@ section.cabecera{
 }
 .jugarya{
     display: flex;
-    height: 42vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
     left: 550px;
 }
+a.jugargratis{
+    width: 250px;
+    height: 100px;
+    padding-top: 17px;
+    font-size: 25px;
+    color: white;
+}
+.card-panel.teal{
+    width: 66.5%;
+    height: 40%;
+    left: 16.75%;
+    top: 29%;
+    position: absolute;
+    visibility: hidden;
+    background-color: #133b8a !important;
+    border-bottom: 5px Solid #2b2b2c;
+    border-top: 5px Solid #0081cc;
+    padding: 9px;
+}
+.cerrar{
+    position: absolute;
+    left: 93.5%;
+    background-color: transparent;
+    border: 1px Solid black;
+    cursor: pointer;
+}
+.cerrar i {
+    width: 60px;
+    height: 60px;
+    padding-top: 17px;
+    font-size: 30px;
+}
+.botones{
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.bt1,.bt2{
+    background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*INICIO*******************************************/
 
 
-/* PAGINADOR */
+/* PAGINADOR *************************************/
 
 .paginado nav{
     margin-top: 2rem;
@@ -237,3 +292,4 @@ section.cabecera{
     background-color: rgb(30,30,30);
     color: #FFF;
 }
+/* PAGINADOR *************************************/

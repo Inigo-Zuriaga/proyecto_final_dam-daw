@@ -62,9 +62,7 @@
         </div>
     </div>
 </nav>
-<svg>
-    <polygon points="0,0 1920,0 1920,10 0,20" fill="#0081cc"/>
-</svg>
+
 
 <!--Menú de navegación móvil-->
 <ul class="sidenav" id="mobile-demo">
@@ -93,10 +91,13 @@
         <a href="{{ route('acceder') }}" title="Acceder" target="_blank" class="acceder">Acceder</a>
     </li>
 </ul>
-
+<svg>
+    <polygon points="0,0 1920,0 1920,10 0,20" fill="#0081cc"/>
+</svg>
 <main>
 
     <header>
+
     </header>
 
     <section class="container-fluid">
