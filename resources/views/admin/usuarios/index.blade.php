@@ -3,7 +3,7 @@
 @section('content')
 
     <h3>
-        <a href="{{ route("admin") }}" title="Inicio">Inicio</a> <span>| Usuarios</span>
+        Listado de Usuarios
     </h3>
     <div class="row">
         <!--Nuevo-->
@@ -31,9 +31,9 @@
                         <div class="card-content">
                             <i class="material-icons medium">person</i>
                             <h4>
-                                {{ $row->nombre }}
+                                {{ $row->usuario }}
                             </h4>
-                            <strong>Usuarios: </strong>{{ ($row->usuarios) ? "Sí" : "No" }}<br>
+                            <strong>Usuarios: </strong>{{ ($row->admin) ? "Sí" : "No" }}<br>
                             <strong>Noticias: </strong>{{ ($row->noticias) ? "Sí" : "No" }}
                         </div>
                         <div class="card-action">

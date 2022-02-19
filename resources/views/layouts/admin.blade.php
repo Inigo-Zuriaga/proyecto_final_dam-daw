@@ -120,21 +120,10 @@
 
 
 <main class="iniciosesion">
-    <header>
-        @if( Auth::check() )
-            <h2> Bienvenido de nuevo <strong>
 
-                    <?php echo $SESSION['hola']= Auth::user()->usuario;?>
-
-</strong></h2>
-@else
-<!--<h2>Iniciar Sesión</h2>-->
-@endif
-</header>
-<section class="container-fluid">
 <!--Content-->
 @yield('content')
-</section>
+
 </main>
 
 <!--Footer-->
