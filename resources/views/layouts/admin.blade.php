@@ -77,6 +77,14 @@
                 @else Acceder
                 @endif
             </a>
+            <li>
+                <form method="POST" action="{{ route('salir') }}">
+                    @csrf
+                    <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text">
+                        Salir
+                    </a>
+                </form>
+            </li>
         </div>
     </div>
 </nav>
