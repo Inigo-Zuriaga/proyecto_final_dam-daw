@@ -26,15 +26,15 @@
         <i class="material-icons">clear</i>
     </button>
     <div class="contenidovent">
-        <h3>Preparate para jugar</h3>
+        <h3>Preparate para jugar</h3><br>
         <div class="botones">
-            <div class="bt1">
-                <span>Aún no tengo una cuenta</span><br>
-                <a href="{{ route('registro') }}" class="boton">Crear una cuenta</a>
+            <div class="bt1" style="width: 28%"><br>
+                <span style="font-size: 15px">Aún no tengo una cuenta</span><br>
+                <a href="{{ route('registro') }}" class="boton" style="font-size: 15px">Crear una cuenta</a>
             </div>
-            <div class="bt2">
-                <span>Tengo una cuenta</span>
-                <a href="{{ route('admin') }}">Iniciar sesión</a>
+            <div class="bt2" style="width: 28%"><br>
+                <span style="font-size: 15px;">Tengo cuenta</span>
+                <a href="{{ route('admin') }}" style="font-size: 15px">Iniciar sesión</a>
             </div>
         </div>
     </div>
