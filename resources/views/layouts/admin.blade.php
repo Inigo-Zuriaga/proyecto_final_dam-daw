@@ -57,7 +57,7 @@
         </ul>
         <div class="navderecha">
             <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugar">Jugar</a>
-            <a href="{{ route('admin') }}" title="Acceder" target="_blank" class="acceder">Acceder</a>
+            <a href="{{ route('admin') }}" title="Acceder"  class="acceder">Acceder</a>
         </div>
     </div>
 </nav>
