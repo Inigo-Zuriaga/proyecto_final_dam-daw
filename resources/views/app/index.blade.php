@@ -13,9 +13,12 @@
         <p>¡Únete a Crash Bandicoot en una misión para recorrer el mundo!</p>
         {{ Html::image('img/logo.png', 'Logo Crash Bandicoot') }}
         <!--Si estoy seteado, es un enlace-->
-        <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugargratis">Jugar gratis</a>
+        @if( Auth::check() )
+            <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugargratis">Jugar gratis</a>
         <!--Si no estoy seteado, abro un div con botones-->
-        <button onclick="abrirDiv()">Jugar</button>
+        @else
+            <button onclick="abrirDiv()" class="btjugar">Jugar gratis</button>
+        @endif
     </div>
 </section>
 <div align="center" class="card-panel teal" id="hola">

@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row cajita2">
-        <form class="col m12 20" method="POST" action="{{ route('autenticar') }}">
+        <form class="col m12 20" method="POST" action="{{ route('registrarse') }}">
             @csrf
             <div class="row">
                 <h2>Crea una cuenta</h2>
@@ -31,7 +31,7 @@
                             <i class="material-icons right">undo</i>
                         </button>
                     </a>
-                    <button class="btn btn-large waves-effect waves-light " type="submit">
+                    <button class="btn btn-large waves-effect waves-light" type="submit">
                         <i class="material-icons">arrow_forward</i>
                     </button>
                 </div>
