@@ -9,7 +9,7 @@
     </h3>
     <div class="row">
 
-        @foreach ($rowset2 as $row) @endforeach
+
 
             <table class="striped centered">
                 <thead>

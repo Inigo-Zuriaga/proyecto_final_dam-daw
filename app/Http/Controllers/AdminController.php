@@ -16,7 +16,9 @@ class AdminController extends Controller
 
     public function index()
     {
-        $usuario = Auth::user()->usuario;
+        if(Auth::check()){
+            $usuario = Auth::user()->usuario;
+        }
         $row = Usuarios::where('usuario', $usuario)->firstOrFail();
         return view('admin.index',[
             'row' => $row,

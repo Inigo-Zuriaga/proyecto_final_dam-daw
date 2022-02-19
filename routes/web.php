@@ -40,6 +40,7 @@ Route::post('salir', [AuthController::class, 'salir'])->name('salir');
 //Usuarios
 Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:usuarios');
 
+
 //API Datos
 Route::get('mostrardatos', [AppController::class, 'mostrardatos'])->name('mostrardatos');
 Route::get('mostrarusuarios', [AppController::class, 'mostrarusuarios'])->name('mostrarusuarios');

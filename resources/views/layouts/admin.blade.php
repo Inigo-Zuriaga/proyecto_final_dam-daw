@@ -1,3 +1,4 @@
+<?php $SESSION['hola']= "a";?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -47,7 +48,7 @@
                 <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
             </li>
             <li>
-                <a href="{{ route('equipo') }}" title="Usuarios">Usuarios</a>
+                <a href="{{ route('admin/usuarios') }}" title="Usuarios">Usuarios</a>
             </li>
             @else
                 <li>
@@ -121,23 +122,27 @@
 <main class="iniciosesion">
     <header>
         @if( Auth::check() )
-            <h2> Bienvenido de nuevo <strong>{{Auth::user()->usuario}}</strong></h2>
-        @else
-            <!--<h2>Iniciar Sesión</h2>-->
-        @endif
-    </header>
-    <section class="container-fluid">
-        <!--Content-->
-        @yield('content')
-    </section>
+            <h2> Bienvenido de nuevo <strong>
+
+                    <?php echo $SESSION['hola']= Auth::user()->usuario;?>
+
+</strong></h2>
+@else
+<!--<h2>Iniciar Sesión</h2>-->
+@endif
+</header>
+<section class="container-fluid">
+<!--Content-->
+@yield('content')
+</section>
 </main>
 
 <!--Footer-->
 <footer class="center-align">
-    © <?php echo date("Y") ?> Panel de Administración.
-    <a href="https://jairogarciarincon.com" target="_blank" title="Jairo García Rincón">
-        Crash Bandicoot
-    </a>
+© <?php echo date("Y") ?> Panel de Administración.
+<a href="https://jairogarciarincon.com" target="_blank" title="Jairo García Rincón">
+Crash Bandicoot
+</a>
 </footer>
 
 </body>
