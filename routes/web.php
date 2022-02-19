@@ -17,6 +17,7 @@ use App\Http\Controllers\UsuariosController;
 |
 */
 
+//Front-end
 Route::get('/', [AppController::class, 'index'])->name('home');
 Route::get('clasificacion', [AppController::class, 'clasificacion'])->name('clasificacion');
 Route::get('comojugar', [AppController::class, 'comojugar'])->name('comojugar');
@@ -42,6 +43,5 @@ Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('
 //API Datos
 Route::get('mostrardatos', [AppController::class, 'mostrardatos'])->name('mostrardatos');
 Route::get('mostrarusuarios', [AppController::class, 'mostrarusuarios'])->name('mostrarusuarios');
-
 Route::get('leer', [AppController::class, 'leer'])->name('leer');
 

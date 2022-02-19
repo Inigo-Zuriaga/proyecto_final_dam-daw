@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Usuarios;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 class AdminController extends Controller
 {
     public function __construct()
@@ -11,24 +16,13 @@ class AdminController extends Controller
 
     public function index()
     {
-        /*
-        *  $usuario=Auth::user()->usuario;
-       $row = Usuario::where('usuario', $usuario)->firstOrFail();
-       return view('admin.index',[
-           'row' => $row,
-       ]);
-        */
-        return view('admin.index');
-    }
-
-
-    public function perfil($id)
-    {
-        //Obtengo el usuario o muestro error
-        $row = Usuario::where('id', $id)->firstOrFail();
-
-        return view('admin.usuarios.editar',[
+        if(Auth::check()){
+            $usuario = Auth::user()->usuario;
+        }
+        $row = Usuarios::where('usuario', $usuario)->firstOrFail();
+        return view('admin.index',[
             'row' => $row,
         ]);
     }
+
 }
