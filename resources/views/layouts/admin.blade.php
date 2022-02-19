@@ -66,7 +66,7 @@
                     <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
                 </li>
                 <li>
-                    <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
+                    <a href="{{ route('acercade') }}" title="Acerca de">Acerca dee</a>
                 </li>
             @endif
         </ul>
