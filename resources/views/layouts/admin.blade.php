@@ -58,6 +58,15 @@
         <div class="navderecha">
             <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugar">Jugar</a>
             <a href="{{ route('admin') }}" title="Acceder" target="_blank" class="acceder">Acceder</a>
+
+            <li>
+                <form method="POST" action="{{ route('salir') }}">
+                    @csrf
+                    <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text">
+                        Salir
+                    </a>
+                </form>
+            </li>
         </div>
     </div>
 </nav>
