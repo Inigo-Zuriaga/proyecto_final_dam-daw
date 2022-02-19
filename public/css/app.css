@@ -217,6 +217,7 @@ button.btjugar{
     background-color: transparent;
     font-size: 25px;
     background-position-y: initial;
+    cursor: pointer;
 }
 .card-panel.teal{
     width: 66.5%;
@@ -256,6 +257,7 @@ button.btjugar{
     background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/btAceder.png);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 142px;
 }
 
 

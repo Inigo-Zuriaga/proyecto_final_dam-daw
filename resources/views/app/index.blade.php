@@ -34,7 +34,7 @@
             </div>
             <div class="bt2">
                 <span>Tengo una cuenta</span>
-                <p><a href="{{ route('admin') }}">Iniciar sesión</a></p>
+                <a href="{{ route('admin') }}">Iniciar sesión</a>
             </div>
         </div>
     </div>

@@ -74,6 +74,92 @@ class AppController extends Controller
     }
 
 
+    //Métodos para la API (podrían ir en otro controlador)
+
+    public function mostrardatos(){
+
+        //Obtengo las noticias a mostrar en el listado de noticias
+        $rowset = Datos::orderBy('record', 'DESC')->get();
+        //Opción rápida (datos completos)
+        //$noticias = $rowset;
+
+        //Opción personalizada
+        foreach ($rowset as $row){
+            $datos[] = [
+                'usuario' => $row->usuario,
+                'frutas' => $row->frutas,
+                'enemigos' => $row->enemigos,
+                'ult_distancia' => $row->ult_distancia,
+                'fecha_record' => date("d/m/Y", strtotime($row->fecha_record)),
+                'record' => $row->record,
+                'numero_partidas' => $row->numero_partidas,
+                'created_at' => date("d/m/Y", strtotime($row->created_at)),
+                'updated_at' => date("d/m/Y", strtotime($row->updated_at)),
+            ];
+        }
+
+        //Devuelvo JSON
+        return response()->json(
+            $datos, //Array de objetos
+            200, //Tipo de respuesta
+            [], //Headers
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE //Opciones de escape
+        );
+
+    }
+    public function mostrarusuarios(){
+
+        //Obtengo las noticias a mostrar en el listado de noticias
+        $rowset = Usuarios::orderBy('created_at', 'DESC')->get();
+        //Opción rápida (datos completos)
+        //$noticias = $rowset;
+
+        //Opción personalizada
+        foreach ($rowset as $row){
+            $datos[] = [
+                'usuario' => $row->usuario,
+                'email' => $row->email,
+                'password' => $row->password,
+                'imagen' => $row->imagen,
+                'fecha_registro' => date("d/m/Y", strtotime($row->fecha_registro)),
+                'biografia' => $row->biografia,
+                'activo' => $row->activo,
+                'admin' => $row->admin,
+                'titulo_post' => $row->titulo_post,
+                'texto_post' => $row->texto_post,
+                'imagen_post' => $row->imagen_post,
+                'estado_post' => $row->estado_post,
+                'slug' => $row->slug,
+                'fecha_post' => date("d/m/Y", strtotime($row->fecha_post)),
+                'created_at' => date("d/m/Y", strtotime($row->created_at)),
+                'updated_at' => date("d/m/Y", strtotime($row->updated_at)),
+            ];
+        }
+
+        //Devuelvo JSON
+        return response()->json(
+            $datos, //Array de objetos
+            200, //Tipo de respuesta
+            [], //Headers
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE //Opciones de escape
+        );
+
+    }
+
+    public function leer(){
+
+        //Url de destino
+        $url = route('mostrar');
+
+        //Parseo datos a un array
+        $rowset = json_decode(file_get_contents($url), true);
+
+        //LLamo a la vista
+        return view('api.leer',[
+            'rowset' => $rowset,
+        ]);
+
+    }
 
 
 }
