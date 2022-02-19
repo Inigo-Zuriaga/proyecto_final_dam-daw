@@ -19,7 +19,7 @@
                         <i class="material-icons">arrow_forward</i>
                     </button>
                     <p>
-                        <a href="{{ route('registro') }}" title="Registrarse" class="crearcuenta">Crear una cuenta</a>
+                        <a href="{{ route('registro') }}" title="Registrarse" class="crearcuenta">Crear una cuentaa</a>
                     </p>
                 </div>
             </div>
