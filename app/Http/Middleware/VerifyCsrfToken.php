@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        //http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/index.php/acceder
+        //ruta a la funcion de acceder --> authcontroller --> autenticar()
     ];
 }

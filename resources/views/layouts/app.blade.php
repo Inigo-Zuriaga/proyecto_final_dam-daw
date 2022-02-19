@@ -37,28 +37,47 @@
 
         <!--Menú de navegación-->
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li>
-                <a href="{{ route('home') }}" title="Inicio">Inicio</a>
-            </li>
-            <li>
-                <a href="{{ route('comojugar') }}" title="Como jugar">Cómo jugar</a>
-            </li>
-            <li>
-                <a href="{{ route('foro') }}" title="Foro">Foro</a>
-            </li>
-            <li>
-                <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
-            </li>
-            <li>
-                <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
-            </li>
-            <li>
-                <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
-            </li>
+            @if( Auth::check() )
+                <li>
+                    <a href="{{ route('home') }}" title="Inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="{{ route('foro') }}" title="Foro">Foro</a>
+                </li>
+                <li>
+                    <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+                </li>
+                <li>
+                    <a href="{{ route('equipo') }}" title="Usuarios">Usuarios</a>
+                </li>
+            @else
+                <li>
+                    <a href="{{ route('home') }}" title="Inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="{{ route('comojugar') }}" title="Como jugar">Cómo jugar</a>
+                </li>
+                <li>
+                    <a href="{{ route('foro') }}" title="Foro">Foro</a>
+                </li>
+                <li>
+                    <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+                </li>
+                <li>
+                    <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
+                </li>
+                <li>
+                    <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
+                </li>
+            @endif
         </ul>
         <div class="navderecha">
             <a href="{{ route('jugar') }}" title="Jugar" target="_blank" class="jugar">Jugar</a>
-            <a href="{{ route('admin') }}" title="Acceder"  class="acceder">Acceder</a>
+            <a href="{{ route('admin') }}" title="Acceder" class="acceder">
+                @if( Auth::check() ) Perfil
+                @else Acceder
+                @endif
+            </a>
         </div>
     </div>
 </nav>
