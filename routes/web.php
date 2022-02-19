@@ -27,8 +27,13 @@ Route::get('acercade', [AppController::class, 'acercade'])->name('acercade');
 Route::get('jugar', [AppController::class, 'jugar'])->name('jugar');
 
 
-//Back-end
+//BACK-END
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
+//Usuarios
+Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:admin');
+Route::get('admin/usuarios/activar/{id}', [UsuariosController::class, 'activar'])->middleware('role:admin');
+Route::get('admin/usuarios/borrar/{id}', [UsuariosController::class, 'borrar'])->middleware('role:admin');
+
 
 //Auth
 Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');
@@ -36,10 +41,6 @@ Route::post('autenticar', [AuthController::class, 'autenticar'])->name('autentic
 Route::get('registro', [AuthController::class, 'registro'])->name('registro');
 Route::post('registrarse', [AuthController::class, 'registrarse'])->name('registrarse');
 Route::post('salir', [AuthController::class, 'salir'])->name('salir');
-
-//Usuarios
-Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:usuarios');
-
 
 //API Datos
 Route::get('mostrardatos', [AppController::class, 'mostrardatos'])->name('mostrardatos');

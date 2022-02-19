@@ -27,7 +27,7 @@ class UsuariosController extends Controller
     public function index()
     {
         //Obtengo todos los usuarios ordenados por nombre
-        $rowset = Usuarios::orderBy("nombre","ASC")->get();
+        $rowset = Usuarios::all();
 
         return view('admin.usuarios.index',[
             'rowset' => $rowset,
