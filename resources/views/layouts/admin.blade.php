@@ -1,4 +1,4 @@
-<?php $SESSION['hola']= "a";?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -48,7 +48,7 @@
                 <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
             </li>
             <li>
-                <a href="{{ route('admin/usuarios') }}" title="Usuarios">Usuarios</a>
+                <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
             </li>
             @else
                 <li>
