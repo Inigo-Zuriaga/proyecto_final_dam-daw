@@ -78,14 +78,7 @@
                 @else Acceder
                 @endif
             </a>
-            <li>
-                <form method="POST" action="{{ route('salir') }}">
-                    @csrf
-                    <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text">
-                        Salir
-                    </a>
-                </form>
-            </li>
+
         </div>
     </div>
 </nav>
@@ -104,14 +97,7 @@
                 <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
             </li>
         @endif
-        <li>
-            <form method="POST" action="">
-                @csrf
-                <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text">
-                    Salir
-                </a>
-            </form>
-        </li>
+
     </ul>
 @endif
 
@@ -127,6 +113,7 @@
                     <?php echo $SESSION['hola']= Auth::user()->usuario;?>
 
 </strong></h2>
+
 @else
 <!--<h2>Iniciar Sesión</h2>-->
 @endif
@@ -135,6 +122,14 @@
 <!--Content-->
 @yield('content')
 </section>
+    <li>
+        <form method="POST" action="">
+            @csrf
+            <a onclick="$(this).closest('form').submit()" title="Salir"  class="grey-text" style="position:absolute;">
+                Salir
+            </a>
+        </form>
+    </li>
 </main>
 
 <!--Footer-->
