@@ -1,10 +1,14 @@
 @extends('layouts.admin')
 
 @section('content')
-
+    @foreach ($rowset as $row)
     <div class="card admin" style="height: 560px">
         <h2>{{Auth::user()->usuario}}</h2>
+        @if($row->imagen==null)
+            <i class="grey-text material-icons large">person</i>
+        @else
         {{ Html::image('img/'.$row->imagen, 'foto perfil', ['class'=>'circle']) }}
+        @endif
         <div class="card-content">
             <div align="center" class="infotitulo">Información básica</div>
             <div class="info">
@@ -59,6 +63,7 @@
                 </table>
             </div>
         </div>
+        @endforeach
     </div>
 
 @endsection

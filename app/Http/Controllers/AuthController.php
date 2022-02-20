@@ -50,7 +50,8 @@ class AuthController extends Controller
         $usuario = Usuarios::create([
             'usuario' => $data['usuario'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password'])
+            'password' => Hash::make($data['password'],)
+            //'fecha_registro' => )
         ]);
 
         Auth::login($usuario);

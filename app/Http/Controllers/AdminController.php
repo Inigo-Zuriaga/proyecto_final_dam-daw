@@ -19,14 +19,14 @@ class AdminController extends Controller
     {
        $usuario = Auth::user()->usuario;
 
-        $row = Usuarios::where('usuario', $usuario)->firstOrFail();
-        $pepe = Datos::where('usuario', $usuario)->firstOrFail();
+        $rowset = Usuarios::
+            join('datos','datos.usuario', '=', 'usuarios.usuario')
+            ->where('usuarios.usuario', $usuario)
+            ->get();
 
-        return view('admin.index',[
-            'juan' => $row,'pepe'=>$pepe
-        ]);
-
-
+        return view('admin.index',['rowset' => $rowset,]);
     }
+
+
 
 }

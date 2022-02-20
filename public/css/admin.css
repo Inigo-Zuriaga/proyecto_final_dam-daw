@@ -325,8 +325,9 @@ a.salir{
     padding: 1%;
     width: 80%;
     margin-top: 50px;
-
-
+}
+i.large {
+    font-size: 13rem;
 }
 
 /*Listado usuarops****************/

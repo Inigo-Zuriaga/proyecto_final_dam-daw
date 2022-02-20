@@ -8,8 +8,8 @@
     </h3>
     <div class="row">
         <!--Nuevo-->
-        <article class="col s12 l6 usuarios" >
-            <div class="card" style="height: 360px">
+        <article class="col s12 l6" style="width: 50%">
+            <div class="card horizontal admin" style="height: 360px">
                 <div class="card-stacked">
                     <div class="card-content">
                         <i class="grey-text material-icons medium">person</i>
@@ -28,17 +28,18 @@
         </article>
 
         @foreach ($rowset as $row)
-            <article class="col s12 l6 usuarios" >
-                <div class="card  sticky-action admin">
+            <article class="col s12 l6" style="width: 50%">
+                <div class="card horizontal  sticky-action admin">
                     <div class="card-stacked">
+                        @if($row->fecha_registro==null)
+                            <span style="float:right;color:red">Nuevo</span>
+                        @endif
                         <div class="card-content">
-                            <?php
-
+                            @php
                             $imagen = ($row->imagen == "") ? 'person' : $row->imagen;
                             $color = ($row->activo == 1) ? "green-text" : "red-text";
                             $icono = ($row->activo == 1) ? "visibility" : "visibility_off";
-                            ?>
-
+                            @endphp
                             <h4>
                                 {{ $row->nombre }}
                             </h4>
@@ -49,7 +50,7 @@
                                 if($imagen=='person'){  ?>
                                 <i class="material-icons medium">person</i> <?php
 
-                            }else{
+                                }else{
                                 ?> <div style="padding-bottom: 130px"><img style="width: 80%; height: 80%" src="http://3.143.248.187/proyecto_final_dam-daw/public/img/<?php echo $row->imagen ?>" alt=""></div> <?php
                                 }
                                 ?>
