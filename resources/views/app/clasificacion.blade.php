@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@php $num=1; @endphp
+@php $num= ($rowset->currentPage()-1)*10+1; @endphp
     <h3>
         TABLAS DE CLASIFICACIÓN
     </h3>
@@ -20,7 +20,7 @@
                 </thead>
         @foreach ($rowset as $row)
                     <tr>
-                        <td>{{ $num++ }}</td>
+                        <td>{{ $num++}}</td>
                         <td>{{ $row->usuario  }}</td>
                         <td>{{ $row->frutas  }}</td>
                         <td>{{ $row->enemigos  }}</td>
