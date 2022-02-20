@@ -209,12 +209,13 @@ form p{
 
 /* INICIO SESION*/
 
-main{
+main.iniciosesion{
     background-image: url(http://3.143.248.187/proyecto_final_dam-daw/public/img/fondo_iniciarSe.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     margin-top: -40px;
+    background-attachment: fixed;
 }
 
 .cajita,.cajita2{
@@ -302,12 +303,14 @@ input[type=text]:not(.browser-default){
     margin-right: 40px
 }
 a.salir{
-    position:absolute;
-    display: inline-block;
-    left: 900px;
-    bottom: 103px
+    position: absolute;
+    left: 575px;
+    bottom: 63px;
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
 }
-h2{
+.card.admin h2{
     margin:-1.5rem 0 0 1.5rem
 }
 .card.admin .infotitulo{
@@ -315,3 +318,10 @@ h2{
     padding-bottom: 24px;
     color: #9f9f9f;
 }
+
+/*Listado usuarops****************/
+
+article{
+    
+}
+

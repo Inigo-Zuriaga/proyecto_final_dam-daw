@@ -1,43 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-
-
-
+@php $num=1; @endphp
     <h3>
-        <a href="{{ route('home') }}" title="Inicio">Inicio</a> <span>| Clasificacion</span>
+        TABLAS DE CLASIFICACIÓN
     </h3>
     <div class="row">
-
-
-
             <table class="striped centered">
                 <thead>
                 <tr>
+                    <th>Posición</th>
                     <th>Usuario</th>
                     <th>Frutas</th>
                     <th>Enemigos</th>
-                    <th>Última distancia</th>
                     <th>Número de partidas</th>
                     <th>Record</th>
                     <th>Fecha record</th>
                 </tr>
                 </thead>
-
-
         @foreach ($rowset as $row)
-
-
                     <tr>
+                        <td>{{ $num++ }}</td>
                         <td>{{ $row->usuario  }}</td>
                         <td>{{ $row->frutas  }}</td>
                         <td>{{ $row->enemigos  }}</td>
-                        <td>{{ $row->ult_distancia  }}m</td>
-                        <td>{{ $row->numero_partidas  }}</td>
+                        <td>{{ $row-> numero_partidas }}</td>
                         <td>{{ $row->record  }}m</td>
                         <td class="">{{ $row->fecha_record  }}</td>
                     </tr>
-
         @endforeach
         </tbody>
             </table>
