@@ -7,15 +7,16 @@
     </h3>
     <div class="row">
         <!--Nuevo-->
-        <article class="col s12 l6">
+        <article class="col s12 l6" style="width: 50%">
             <div class="card horizontal admin">
                 <div class="card-stacked">
                     <div class="card-content">
                         <i class="grey-text material-icons medium">person</i>
                         <h4 class="grey-text">
                             nuevo usuario
-                        </h4><br><br>
+                        </h4>
                     </div>
+
                     <div class="card-action">
                         <a href="{{ url("admin/usuarios/crear") }}" title="Añadir nuevo usuario">
                             <i class="material-icons">add_circle</i>
@@ -24,17 +25,31 @@
                 </div>
             </div>
         </article>
+
         @foreach ($rowset as $row)
-            <article class="col s12 l6">
+            <article class="col s12 l6" style="width: 50%">
                 <div class="card horizontal  sticky-action admin">
                     <div class="card-stacked">
                         <div class="card-content">
-                            <i class="material-icons medium">person</i>
+                            <?php
+                                $hola='person';
+                                $imagen = ($row->imagen == "") ? $hola='person' : $hola=$row->imagen;
+                                $color = ($row->activo == 1) ? "green-text" : "red-text";
+                                $icono = ($row->activo == 1) ? "visibility" : "visibility_off";
+
+                                if($imagen=='person'){  ?>
+                            <i class="material-icons medium">person</i> <?php
+
+                            }else{
+                                    ?> <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/<?php echo $imagen ?>" alt=""> <?php
+                                }
+                            ?>
+
+
                             <h4>
                                 {{ $row->nombre }}
                             </h4>
-                            <strong>Usuarios: </strong>{{ ($row->usuarios) ? "Sí" : "No" }}<br>
-                            <strong>Noticias: </strong>{{ ($row->noticias) ? "Sí" : "No" }}
+                            <strong>Admin: </strong>{{ ($row->admin) ? "Sí" : "No" }}<br>
                         </div>
                         <div class="card-action">
                             <a href="{{ url("admin/usuarios/editar/".$row->id) }}" title="Editar">
@@ -43,13 +58,14 @@
                             @php
                                 $title = ($row->activo == 1) ? "Desactivar" : "Activar";
                                 $color = ($row->activo == 1) ? "green-text" : "red-text";
-                                $icono = ($row->activo == 1) ? "mood" : "mood_bad";
+                                $icono = ($row->activo == 1) ? "visibility" : "visibility_off";
                             @endphp
                             <a href="{{ url("admin/usuarios/activar/".$row->id) }}" title="{{ $title }}">
                                 <i class="{{ $color }} material-icons">{{ $icono }}</i>
                             </a>
                             <a href="#" class="activator" title="Borrar">
-                                <i class="material-icons">delete</i>
+                                <i class="material-icons">delete_forever
+                                </i>
                             </a>
                         </div>
                     </div>
@@ -62,7 +78,8 @@
                         </p>
                         <a href="{{ url("admin/usuarios/borrar/".$row->id) }}" title="Borrar">
                             <button class="btn waves-effect waves-light" type="button">Borrar
-                                <i class="material-icons right">delete</i>
+                                <i class="material-icons right">delete_forever
+                                </i>
                             </button>
                         </a>
                     </div>

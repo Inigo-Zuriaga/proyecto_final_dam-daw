@@ -189,6 +189,7 @@ article .card-info{
     margin: 1.5rem 0 0 2rem;
 }
 
+
 .toast{
     background-color: transparent;
     border: none;
@@ -209,7 +210,7 @@ form p{
 /* INICIO SESION*/
 
 main.iniciosesion{
-    background-image: url(http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/img/fondo_iniciarSe.png);
+    background-image: url(http://3.143.248.187/proyecto_final_dam-daw/public/img/crashportal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
