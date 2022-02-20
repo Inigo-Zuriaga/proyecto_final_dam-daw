@@ -20,12 +20,12 @@
     <div class="row" style="text-align: center">
         <h1>DAW</h1>
         <div class="col s12 m3 l3" style="margin-left: 10%" >
-            <div class="card" style="border-radius: 10px;">">
+            <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
                 <div class="card-content">
-                    <p>Pablo Horcajada</p>
+                    <p>Pablo Horcajada Gonzalez</p>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
                 <div class="card-content">
-                    <p>Iñigo Zuriaga</p>
+                    <p>Iñigo Zuriaga Peña</p>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
                 <div class="card-content">
-                    <p>Alex gfdggfdgf</p>
+                    <p>Alejandro Pérez</p>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%;margin-left: 40px">
                 </div>
                 <div class="card-content">
-                    <p>Max gfdgdfg</p>
+                    <p>Max Donoso Thomas de Carranza</p>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
                 <div class="card-content">
-                    <p>Yago gfdggfdgf</p>
+                    <p>Yago Mosquera Fernandez</p>
                 </div>
             </div>
         </div>
