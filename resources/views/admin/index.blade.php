@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="card admin" >
+    <div class="card admin" style="height: 560px">
         <h2>{{Auth::user()->usuario}}</h2>
         {{ Html::image('img/'.$row->imagen, 'foto perfil', ['class'=>'circle']) }}
         <div class="card-content">
@@ -20,7 +20,7 @@
                 <div class="row">
                     <span>Fecha creación cuenta </span><span class="valor">{{ $row->created_at }}</span>
                 </div>
-                <span class="card-title activator">Biografía</span>
+                <a class="card-title activator">Biografía</a>
             </div>
             <form method="POST" action="{{ route('salir') }}">
                 @csrf

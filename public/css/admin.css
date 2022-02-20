@@ -278,7 +278,7 @@ input[type=text]:not(.browser-default){
     width: 60%;
     margin: auto;
     margin-top: 160px;
-    height: 560px;
+    height: 360px;
 }
 .card.admin img{
     float: left;
@@ -322,6 +322,6 @@ a.salir{
 /*Listado usuarops****************/
 
 article{
-    
+
 }
 
