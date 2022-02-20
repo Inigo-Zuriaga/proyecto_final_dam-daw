@@ -15,7 +15,7 @@
                     <th>Enemigos</th>
                     <th>Número de partidas</th>
                     <th>Record</th>
-                    <th>Fecha record</th>
+                    <th>Fecha recordd</th>
                 </tr>
                 </thead>
         @foreach ($rowset as $row)
