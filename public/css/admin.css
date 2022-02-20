@@ -269,4 +269,38 @@ input[type=text]:not(.browser-default){
     padding: 0 36px;
 }
 
+/*INICIO ADMIN*************************************************/
+.card.admin{
+    background-color: #0000007a;
+    padding: 4%;
+    width: 75%;
+    margin: auto;
+    margin-top: 100px;
+}
+.card.admin img{
+    float: left;
+    width: 25%;
+}
+.card.admin .card-content{
+    text-align: left;
+    margin-left: 23%;
+    margin-right: 40px;
+}
+.card.admin .card-content span{
+    color: #ff8d0e;
+}
+.card.admin p.bio{
+    text-align: left;
+    margin-left: 23%;
+    margin-right: 40px
+}
+a.salir{
+    position:absolute;
+    display: inline-block;
+    left: 1656px;
+    bottom: 146px;
+}
+h2{
+    margin: -1.5rem 0 1.5rem 0;
+}
 
