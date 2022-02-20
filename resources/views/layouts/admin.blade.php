@@ -67,7 +67,7 @@
                     <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>
                 </li>
                 <li>
-                    <a href="{{ route('acercade') }}" title="Acerca de">Acerca dee</a>
+                    <a href="{{ route('acercade') }}" title="Acerca de">Acerca de</a>
                 </li>
             @endif
         </ul>
@@ -103,8 +103,7 @@
 
 <!-- Mensajes  -->
 @include('admin.partials.mensajes')
-
-
+<?php  url('admin/usuarios')?>
 <main class="iniciosesion">
 
 <section class="container-fluid">

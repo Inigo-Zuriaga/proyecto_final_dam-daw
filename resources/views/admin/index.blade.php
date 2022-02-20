@@ -22,15 +22,16 @@
                 </div>
                 <span class="card-title activator">Biografía</span>
             </div>
+            <form method="POST" action="{{ route('salir') }}">
+                @csrf
+                <a onclick="$(this).closest('form').submit()" title="Salir" class="salir">Salir</a>
+            </form>
         </div>
         <div class="card-reveal" style="background-color: black;">
             <span class="card-title  text-darken-4"><i class="material-icons right">close</i></span>
             <span>  {{ $row->biografia }} </span>
         </div>
     </div>
-<form method="POST" action="">
-    @csrf
-    <a onclick="$(this).closest('form').submit()" title="Salir" class="salir">Salir</a>
-</form>
+
 @endsection
 
