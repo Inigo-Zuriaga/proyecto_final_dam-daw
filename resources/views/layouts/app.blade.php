@@ -48,7 +48,7 @@
                     <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
                 </li>
                 <li>
-                    <a href="{{ route('equipo') }}" title="Usuarios">Equipo</a>
+                    <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
                 </li>
             @else
                 <li>
