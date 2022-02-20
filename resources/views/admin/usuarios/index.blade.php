@@ -41,7 +41,7 @@
                             <i class="material-icons medium">person</i> <?php
 
                             }else{
-                                    ?> <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/<?php echo $imagen ?>" alt=""> <?php
+                                    ?> {{ Html::image('img/'.$row->imagen, 'foto perfil',) }} <?php
                                 }
                             ?>
 
