@@ -18,16 +18,15 @@ class AdminController extends Controller
     public function index()
     {
        $usuario = Auth::user()->usuario;
+
         $row = Usuarios::where('usuario', $usuario)->firstOrFail();
+        $pepe = Datos::where('usuario', $usuario)->firstOrFail();
+
         return view('admin.index',[
-            'row' => $row,
+            'juan' => $row,'pepe'=>$pepe
         ]);
 
-        $rowset = Datos::orderBy('record', 'ASC');
 
-        return view('app.clasificacion',[
-            'rowset' => $rowset,
-        ]);
     }
 
 }

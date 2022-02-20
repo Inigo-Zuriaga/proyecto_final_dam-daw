@@ -8,8 +8,8 @@
     </h3>
     <div class="row">
         <!--Nuevo-->
-        <article class="col s12 l6" style="width: 50%">
-            <div class="card horizontal admin" style="height: 360px">
+        <article class="col s12 l6 usuarios" >
+            <div class="card" style="height: 360px">
                 <div class="card-stacked">
                     <div class="card-content">
                         <i class="grey-text material-icons medium">person</i>
@@ -28,8 +28,8 @@
         </article>
 
         @foreach ($rowset as $row)
-            <article class="col s12 l6" style="width: 50%">
-                <div class="card horizontal  sticky-action admin">
+            <article class="col s12 l6 usuarios" >
+                <div class="card  sticky-action admin">
                     <div class="card-stacked">
                         <div class="card-content">
                             <?php
@@ -38,9 +38,6 @@
                             $color = ($row->activo == 1) ? "green-text" : "red-text";
                             $icono = ($row->activo == 1) ? "visibility" : "visibility_off";
                             ?>
-
-
-
 
                             <h4>
                                 {{ $row->nombre }}
