@@ -278,7 +278,7 @@ input[type=text]:not(.browser-default){
     width: 60%;
     margin: auto;
     margin-top: 160px;
-    height: 360px;
+    height: 460px;
 }
 .card.admin img{
     float: left;
@@ -317,6 +317,14 @@ a.salir{
     font-size: 35px;
     padding-bottom: 24px;
     color: #9f9f9f;
+}
+
+.card .horizontal  .sticky-action .admin{
+    padding: 1%;
+    width: 80%;
+    margin-top: 50px;
+
+
 }
 
 /*Listado usuarops****************/

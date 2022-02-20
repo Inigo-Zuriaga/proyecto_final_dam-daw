@@ -16,6 +16,7 @@
         <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
     </div>-->
 
+
 <div class="card admin" style="background-color: #0000007a;">
     <div class="row" style="text-align: center">
         <h1>DAW</h1>

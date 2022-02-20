@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Datos;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +21,12 @@ class AdminController extends Controller
         $row = Usuarios::where('usuario', $usuario)->firstOrFail();
         return view('admin.index',[
             'row' => $row,
+        ]);
+
+        $rowset = Datos::orderBy('record', 'ASC');
+
+        return view('app.clasificacion',[
+            'rowset' => $rowset,
         ]);
     }
 

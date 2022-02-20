@@ -1,7 +1,33 @@
 @extends('layouts.admin')
 
 @section('content')
+    <div class="row">
+        <table class="striped centered">
+            <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Usuario</th>
+                <th>Frutas</th>
+                <th>Enemigos</th>
+                <th>Número de partidas</th>
+                <th>Record</th>
+                <th>Fecha record</th>
+            </tr>
+            </thead>
 
+                <tr>
+
+                    <td>{{ $row->usuario  }}</td>
+                    <td>{{ $row->frutas  }}</td>
+                    <td>{{ $row->enemigos  }}</td>
+                    <td>{{ $row-> numero_partidas }}</td>
+                    <td>{{ $row->record  }}m</td>
+                    <td class="">{{ $row->fecha_record  }}</td>
+                </tr>
+
+                </tbody>
+        </table>
+    </div>
     <div class="card admin" style="height: 560px">
         <h2>{{Auth::user()->usuario}}</h2>
         {{ Html::image('img/'.$row->imagen, 'foto perfil', ['class'=>'circle']) }}

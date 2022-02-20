@@ -33,19 +33,14 @@
                     <div class="card-stacked">
                         <div class="card-content">
                             <?php
-                            $hola='person';
-                            $imagen = ($row->imagen == "") ? $hola='person' : $hola=$row->imagen;
+
+                            $imagen = ($row->imagen == "") ? 'person' : $row->imagen;
                             $color = ($row->activo == 1) ? "green-text" : "red-text";
                             $icono = ($row->activo == 1) ? "visibility" : "visibility_off";
-
-                            if($imagen=='person'){  ?>
-                            <i class="material-icons medium">person</i> <?php
-
-                            }else{
-                            ?> {{ Html::image('img/'.$row->imagen, 'foto perfil',) }} <?php
-                            }
                             ?>
-                            <br>
+
+
+
 
                             <h4>
                                 {{ $row->nombre }}
@@ -53,7 +48,14 @@
                             <div style="margin-left: 10px">
                                 <strong>Admin: </strong>{{ ($row->admin) ? "Sí" : "No" }}<br>
                                 <strong>Usuario: </strong>{{ ($row->usuario) }}<br>
-                                <strong>Email: </strong>{{ ($row->email) }}<br>
+                                <strong>Email: </strong>{{ ($row->email) }}<br><?php
+                                if($imagen=='person'){  ?>
+                                <i class="material-icons medium">person</i> <?php
+
+                            }else{
+                                ?> <div style="padding-bottom: 130px"><img style="width: 80%; height: 80%" src="http://3.143.248.187/proyecto_final_dam-daw/public/img/<?php echo $row->imagen ?>" alt=""></div> <?php
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="card-action">
