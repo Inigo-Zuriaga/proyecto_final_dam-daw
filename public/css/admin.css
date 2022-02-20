@@ -209,8 +209,8 @@ form p{
 
 /* INICIO SESION*/
 
-main.iniciosesion{
-    background-image: url(http://3.143.248.187/proyecto_final_dam-daw/public/img/crashportal.jpg);
+main{
+    background-image: url(http://3.143.248.187/proyecto_final_dam-daw/public/img/fondo_iniciarSe.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -274,14 +274,15 @@ input[type=text]:not(.browser-default){
 .card.admin{
     background-color: rgba(255, 255, 255, 0.6);
     padding: 4%;
-    width: 75%;
+    width: 60%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 160px;
     height: 560px;
 }
 .card.admin img{
     float: left;
-    width: 25%;
+    width: 22.5%;
+    margin: 33px 0 0 10px;
 }
 .card.admin .card-content{
     width: 65%;
@@ -291,6 +292,10 @@ input[type=text]:not(.browser-default){
 .card.admin .card-content span{
     color: #ff8d0e;
 }
+.card.admin span.valor{
+    float: right;
+    color: white;
+}
 .card.admin p.bio{
     text-align: left;
     margin-left: 23%;
@@ -299,13 +304,14 @@ input[type=text]:not(.browser-default){
 a.salir{
     position:absolute;
     display: inline-block;
-    left: 1358px;
-    bottom: -104px;
+    left: 900px;
+    bottom: 103px
 }
 h2{
-    margin: -1.5rem 0 0 0;
+    margin:-1.5rem 0 0 1.5rem
 }
 .card.admin .infotitulo{
     font-size: 35px;
     padding-bottom: 24px;
+    color: #9f9f9f;
 }

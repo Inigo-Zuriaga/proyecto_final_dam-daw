@@ -107,11 +107,6 @@
 
 <main class="iniciosesion">
 
-
-
-
-
-
 <section class="container-fluid">
 <!--Content-->
 @yield('content')
