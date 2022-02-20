@@ -43,7 +43,6 @@
                 <table class="striped centered">
                     <thead>
                     <tr>
-                        <th>Posicion</th>
                         <th>Frutas</th>
                         <th>Enemigos</th>
                         <th>Número de partidas</th>
