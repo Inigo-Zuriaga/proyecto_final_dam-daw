@@ -6,30 +6,27 @@
         <h2>{{Auth::user()->usuario}}</h2>
         {{ Html::image('img/'.$row->imagen, 'foto perfil', ['class'=>'circle']) }}
         <div class="card-content">
-            <div class="infotitulo">Información básica</div>
+            <div align="center" class="infotitulo">Información básica</div>
             <div class="info">
-                <p><span>Nombre </span>{{ $row->usuario }}</p>
-                <p><span>Correo electrónico </span>{{ $row->email }}</p>
-                <p><span>Contraseña </span>******</p>
-                <p><span>Fecha creación cuenta </span>{{ $row->created_at }}</p>
-
-                <p class="bio">{{ $row->biografia }}</p>
+                <div class="row">
+                    <span>Nombre </span><span class="valor">{{ $row->usuario }}</span>
+                </div>
+                <div class="row">
+                    <span>Correo electrónico </span><span class="valor">{{ $row->email }}</span>
+                </div>
+                <div class="row">
+                    <span>Contraseña </span><span class="valor">******</span>
+                </div>
+                <div class="row">
+                    <span>Fecha creación cuenta </span><span class="valor">{{ $row->created_at }}</span>
+                </div>
+                <span class="card-title activator">Biografía</span>
             </div>
         </div>
-
-        <div class="card-content">
-            <div class="card-action">
-                <!--
-                <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
-            </div>
-        </div>
-
-
         <div class="card-reveal" style="background-color: black;">
-            <span class="card-title  text-darken-4"><span>  $row->usuario </span><i class="material-icons right">close</i></span>
-            <span>  $row->biografia </span>
-        </div> -->
-            </div>
+            <span class="card-title  text-darken-4"><i class="material-icons right">close</i></span>
+            <span>  {{ $row->biografia }} </span>
+        </div>
     </div>
 <form method="POST" action="">
     @csrf
