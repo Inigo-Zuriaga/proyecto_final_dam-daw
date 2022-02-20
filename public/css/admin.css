@@ -272,20 +272,21 @@ input[type=text]:not(.browser-default){
 
 /*INICIO ADMIN*************************************************/
 .card.admin{
-    background-color: #0000007a;
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 4%;
     width: 75%;
     margin: auto;
     margin-top: 100px;
+    height: 560px;
 }
 .card.admin img{
     float: left;
     width: 25%;
 }
 .card.admin .card-content{
-    text-align: left;
-    margin-left: 23%;
-    margin-right: 40px;
+    width: 65%;
+    float: right;
+    padding: 0px;
 }
 .card.admin .card-content span{
     color: #ff8d0e;
@@ -298,10 +299,13 @@ input[type=text]:not(.browser-default){
 a.salir{
     position:absolute;
     display: inline-block;
-    left: 1656px;
-    bottom: 146px;
+    left: 1358px;
+    bottom: -104px;
 }
 h2{
-    margin: -1.5rem 0 1.5rem 0;
+    margin: -1.5rem 0 0 0;
 }
-
+.card.admin .infotitulo{
+    font-size: 35px;
+    padding-bottom: 24px;
+}
