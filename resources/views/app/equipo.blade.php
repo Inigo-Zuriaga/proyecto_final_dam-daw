@@ -16,10 +16,11 @@
         <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
     </div>-->
 
+<div class="card admin" style="background-color: #0000007a;">
     <div class="row" style="text-align: center">
         <h1>DAW</h1>
         <div class="col s12 m3 l3" style="margin-left: 10%" >
-            <div class="card" style="">
+            <div class="card" style="border-radius: 10px;">">
                 <div class="card-image">
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
@@ -30,7 +31,7 @@
         </div>
 
         <div class="col s12 m3 l3" >
-            <div class="card" style="">
+            <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
@@ -41,7 +42,7 @@
         </div>
 
         <div class="col s12 m3 l3" >
-            <div class="card" style="">
+            <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
@@ -56,7 +57,7 @@
     <div class="row" style="text-align: center">
         <h1>DAM</h1>
         <div class="col s12 m3 l3" style="margin-left: 25%" >
-            <div class="card" >
+            <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%;margin-left: 40px">
                 </div>
@@ -67,7 +68,7 @@
         </div>
 
         <div class="col s12 m3 l3" >
-            <div class="card" style="">
+            <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
                     <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
                 </div>
@@ -76,7 +77,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
     </div>
 
 
