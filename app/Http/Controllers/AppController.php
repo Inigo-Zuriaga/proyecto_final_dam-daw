@@ -47,11 +47,15 @@ class AppController extends Controller
         //Obtengo los datos a mostrar en el listado de datos
         $rowset = Datos::orderBy('record', 'ASC')->paginate(10,['*'],'pagina',$pagina);
 
+
+
         return view('app.clasificacion',[
-            'rowset' => $rowset,
+            'rowset' => $rowset
+
         ]);
 
     }
+
 
 
     public function jugar()

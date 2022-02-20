@@ -5,6 +5,7 @@
     <h3>
         TABLAS DE CLASIFICACIÓN
     </h3>
+<p class="">{{ $row->biografia  }}</p>
     <div class="row">
             <table class="striped centered">
                 <thead>
