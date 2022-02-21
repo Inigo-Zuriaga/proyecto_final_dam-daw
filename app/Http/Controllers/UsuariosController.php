@@ -71,13 +71,13 @@ class UsuariosController extends Controller
     /**
      * Mostrar el formulario para editar un elemento
      *
-     * @param  int  $id
+     * @param  string  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function editar($id)
+    public function editar($usuario)
     {
         //Obtengo el usuario o muestro error
-        $row = Usuarios::where('id', $id)->firstOrFail();
+        $row = Usuarios::where('usuario', $usuario)->firstOrFail();
 
         return view('admin.usuarios.editar',[
             'row' => $row,
