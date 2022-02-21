@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-
+<!--UWU-->
 @section('content')
     <h3>
         <a href="{{ route("admin") }}" title="Inicio">Inicio</a> <span>| </span>
