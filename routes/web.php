@@ -34,7 +34,10 @@ Route::get('admin', [AdminController::class, 'index'])->name('admin');
 Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:admin');
 Route::get('admin/usuarios/activar/{id}', [UsuariosController::class, 'activar'])->middleware('role:admin');
 Route::get('admin/usuarios/borrar/{id}', [UsuariosController::class, 'borrar'])->middleware('role:admin');
-
+Route::get('admin/usuarios/editar/{id}', [UsuariosController::class, 'editar'])->middleware('role:usuarios');
+Route::get('admin/usuarios/crear', [UsuariosController::class, 'crear'])->middleware('role:usuarios');
+Route::post('admin/usuarios/guardar', [UsuariosController::class, 'guardar'])->middleware('role:usuarios');
+Route::post('admin/usuarios/actualizar/{id}', [UsuariosController::class, 'actualizar'])->middleware('role:usuarios');
 
 //Auth
 Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');

@@ -98,9 +98,10 @@ class UsuariosController extends Controller
         Usuario::where('id', $row->id)->update([
             'nombre' => $request->nombre,
             'email' => $request->email,
+            'biografia' => $request->biografia,
             'password' => ($request->cambiar_clave) ? Hash::make($request->password) : $row->password,
-            'usuarios' => ($request->usuarios) ? 1 : 0,
-            'noticias' => ($request->noticias) ? 1 : 0,
+            'admin' => ($request->usuarios) ? 1 : 0,
+            'activo' => ($request->noticias) ? 1 : 0,
         ]);
 
         return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->nombre.'</strong> guardado');
