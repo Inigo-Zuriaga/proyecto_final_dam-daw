@@ -52,7 +52,7 @@ class AuthController extends Controller
             'usuario' => $data['usuario'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'fecha_registro' => date('Y-m-d h:i:s', time()),
+            'fecha_registro' => date('Y-m-d', time()),
             'slug' => Funciones::getSlug($data['usuario'])
         ]);
 
