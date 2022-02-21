@@ -25,6 +25,7 @@ Route::get('equipo', [AppController::class, 'equipo'])->name('equipo');
 Route::get('foro', [AppController::class, 'foro'])->name('foro');
 Route::get('acercade', [AppController::class, 'acercade'])->name('acercade');
 Route::get('jugar', [AppController::class, 'jugar'])->name('jugar');
+Route::get('jugador/{id}', [AppController::class, 'jugador'])->name('jugador');
 
 
 //BACK-END

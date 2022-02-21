@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Funciones;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -48,10 +49,11 @@ class AuthController extends Controller
         $data = $request->all();
 
         $usuario = Usuarios::create([
-            'usuario' => $data['usuario'],
+            'usuario' => $data['usuario']."hola",
             'email' => $data['email'],
-            'password' => Hash::make($data['password'],)
-            //'fecha_registro' => )
+            'password' => Hash::make($data['password']),
+            'fecha_registro' => date('Y-m-d h:i:s', time()),
+            'slug' => Funciones::getSlug($data['usuario'])
         ]);
 
         Auth::login($usuario);

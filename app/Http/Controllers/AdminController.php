@@ -24,6 +24,9 @@ class AdminController extends Controller
             ->where('usuarios.usuario', $usuario)
             ->get();
 
+        if($rowset=="[]"){
+            $rowset = Usuarios::where('usuario',$usuario)->get();
+        }
         return view('admin.index',['rowset' => $rowset,]);
     }
 

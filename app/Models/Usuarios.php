@@ -27,6 +27,8 @@ class Usuarios extends Authenticatable
         'usuario',
         'email',
         'password',
+        'fecha_registro',
+        'slug',
     ];
 
     /**

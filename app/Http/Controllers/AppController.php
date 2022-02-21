@@ -158,8 +158,9 @@ class AppController extends Controller
         return view('api.leer',[
             'rowset' => $rowset,
         ]);
-
     }
+
+
 
 
 }

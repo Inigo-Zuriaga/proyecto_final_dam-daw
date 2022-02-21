@@ -2,10 +2,7 @@
 
 @section('content')
 @php $num= ($rowset->currentPage()-1)*10+1; @endphp
-    <h3>
-        TABLAS DE CLASIFICACIÓN
-    </h3>
-<p class="">{{ $row->biografia  }}</p>
+    <h3 align="center"> TABLAS DE CLASIFICACIÓN </h3>
     <div class="row">
             <table class="striped centered">
                 <thead>
@@ -14,9 +11,10 @@
                     <th>Usuario</th>
                     <th>Frutas</th>
                     <th>Enemigos</th>
-                    <th>Número de partidas</th>
+                    <th>Nº partidas</th>
                     <th>Record</th>
-                    <th>Fecha recordd</th>
+                    <th>Fecha record</th>
+                    <th></th>
                 </tr>
                 </thead>
         @foreach ($rowset as $row)
@@ -28,20 +26,14 @@
                         <td>{{ $row-> numero_partidas }}</td>
                         <td>{{ $row->record  }}m</td>
                         <td class="">{{ $row->fecha_record  }}</td>
+                        <td><i class="material-icons">open_in_new</i></td>
                     </tr>
         @endforeach
         </tbody>
             </table>
+        <!--Paginación-->
+        <div class="row paginado">
+            {{ $rowset->links() }}
+        </div>
     </div>
-    <!--Paginación-->
-    <div class="row paginado">
-        {{ $rowset->links() }}
-    </div>
-
-
-
-
-
-
-
 @endsection

@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+
     @foreach ($rowset as $row)
         <div class="card admin" style="height: 560px">
             <h2>{{Auth::user()->usuario}}</h2>
@@ -34,12 +35,13 @@
             <div class="card-reveal" style="background-color: black;">
                 <span class="card-title  text-darken-4"><i class="material-icons right">close</i></span>
                 <div class="row">
-                    <span>Biografía</span>
+                    <h3>Biografía</h3>
                     <p><span>{{ $row->biografia }}</span></p>
-
                 </div>
                 <div class="row">
-                    <span>Datos gameplay </span>
+                    <h3>Datos gameplay</h3>
+                    @if ($row->frutas=='') no tienes datos
+                    @else
                     <table class="striped centered">
                         <thead>
                         <tr>
@@ -57,9 +59,9 @@
                             <td>{{ $row->record  }}m</td>
                             <td class="">{{ $row->fecha_record  }}</td>
                         </tr>
-
                         </tbody>
                     </table>
+                    @endif
                 </div>
             </div>
             @endforeach

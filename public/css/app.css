@@ -310,5 +310,12 @@ button.btjugar{
     background-color: rgb(30,30,30);
     color: #FFF;
 }
+
+table{
+    margin-left: 220px;
+    margin-right: auto;
+    width: 75%;
+}
+
 /* PAGINADOR *************************************/
 
