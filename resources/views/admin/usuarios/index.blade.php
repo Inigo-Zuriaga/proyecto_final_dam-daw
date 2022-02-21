@@ -35,7 +35,7 @@
                             $fechahoy = date('Y-m-d', time());
                         @endphp
                         @if($fechahoy==$row->fecha_registro)
-                            <span style="float:right;color:red">Nuevo</span>
+                            <span style="float:right;color:red">Nuevo</span>s
                         @endif
                         <div class="card-content">
                             @php

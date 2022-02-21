@@ -11,19 +11,40 @@
             <span>Nuevo usuario</span>
         @endif
     </h3>
+
+
+    <div class="col m12 l6 center-align">
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>Imagen</span>
+                <input type="file" name="imagen">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+        @if ($row->imagen)
+            {{ Html::image('img/'.$row->imagen, $row->titulo, ['class' => 'responsive-img']) }}
+        @endif
+    </div>
+
+
     <div class="row">
         @php $accion = ($row->id) ? "actualizar/".$row->id : "guardar" @endphp
         <form class="col m12 l6" method="POST" action="{{ url("admin/usuarios/".$accion) }}">
             @csrf
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="nombre" type="text" name="nombre" value="{{ $row->nombre }}">
-                    <label for="nombre">Nombre</label>
+                    <input id="usuario" type="text" name="usuario" value="{{ $row->usuario }}">
+                    <label for="usuario">Usuario</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="email" type="text" name="email" value="{{ $row->email }}">
                     <label for="email">E-mail</label>
                 </div>
+
+                <textarea name="biografia" id="biografia" style="width: 80rem; height: 15rem">{{ $row->biografia }}</textarea>
+
                 @php $clase = ($row->id) ? "hide" : "" @endphp
                 <div class="input-field col s12 {{ $clase }}" id="password">
                     <input id="password" type="password" name="password" value="">
@@ -44,16 +65,11 @@
                 <p>Permisos</p>
                 <p>
                     <label for="noticias">
-                        <input id="noticias" name="noticias" type="checkbox" {{ ($row->admin == 1) ? "checked" : "" }}>
-                        <span>Noticias</span>
+                        <input id="noticias" name="Admin" type="checkbox" {{ ($row->admin == 1) ? "checked" : "" }}>
+                        <span>Admin</span>
                     </label>
                 </p>
-                <p>
-                    <label for="usuarios">
-                        <input id="usuarios" name="usuarios" type="checkbox" {{ ($row->activo == 1) ? "checked" : "" }}>
-                        <span>Usuarios</span>
-                    </label>
-                </p>
+
                 <div class="input-field col s12">
                     <a href="{{ url("admin/usuarios") }}" title="Volver">
                         <button class="btn waves-effect waves-light" type="button">Volver
