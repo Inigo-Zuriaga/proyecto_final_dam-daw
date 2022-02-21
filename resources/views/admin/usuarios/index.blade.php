@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="card-action">
-                            <a href="{{ url("admin/usuarios/editar/".$row->id) }}" title="Editar">
+                            <a href="{{ url("admin/usuarios/editar/".$row->usuario) }}" title="Editar">
                                 <i class="material-icons">edit</i>
                             </a>
                             @php
