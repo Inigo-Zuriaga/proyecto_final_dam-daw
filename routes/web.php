@@ -59,3 +59,6 @@ Route::get('mostrardatos', [AppController::class, 'mostrardatos'])->name('mostra
 Route::get('mostrarusuarios', [AppController::class, 'mostrarusuarios'])->name('mostrarusuarios');
 Route::get('leer', [AppController::class, 'leer'])->name('leer');
 
+
+Route::post('añadirPartida', [ApiController::class, 'añadirPartida'])->name('añadirPartida');
+
