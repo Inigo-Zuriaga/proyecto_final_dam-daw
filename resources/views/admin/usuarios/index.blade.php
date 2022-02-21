@@ -32,10 +32,11 @@
                 <div class="card horizontal  sticky-action admin">
                     <div class="card-stacked">
                         @php
-                            $fechahoy = date('d', time());
-                            $fechausuario = substr($row->fecha_registro,8,9);
+                            $fecha = date('Y-m-d h:i:s', time());
+                            $fechahoy = substr($fecha,5,-12)+substr($fecha,8,-9);
+                            $fechausuario = substr($row->fecha_registro,5,-12)+substr($row->fecha_registro,8,-9);
                         @endphp
-                        @if($fechausuario<$fechahoy)
+                        @if($fechahoy>$fechausuario)
                             <span style="float:right;color:red">Nuevo</span>
                         @endif
                         <div class="card-content">
