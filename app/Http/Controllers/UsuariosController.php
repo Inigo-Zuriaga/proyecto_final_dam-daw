@@ -58,12 +58,25 @@ class UsuariosController extends Controller
     public function guardar(UsuariosRequest $request)
     {
         Usuarios::create([
-            'nombre' => $request->nombre,
+            'usuario' => $request->usuario,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'usuarios' => ($request->usuarios) ? 1 : 0,
-            'noticias' => ($request->noticias) ? 1 : 0,
+            'biografia' => $request->biografia,
+            //'fecha' => \DateTime::createFromFormat("d-m-Y", $request->fecha_registro)->format("Y-m-d H:i:s"),
+            'admin' => ($request->admin) ? 1 : 0,
         ]);
+
+        //Imagen
+        if ($request->hasFile('imagen')) {
+            $archivo = $request->file('imagen');
+            $nombre = $archivo->getClientOriginalExtension();
+            $archivo->move(public_path()."/img/", $nombre);
+            Usuarios::where('id', $row->usuario)->update(['imagen' => $nombre]);
+            $texto = " e imagen subida.";
+        }
+        else{
+            $texto = ".";
+        }
 
         return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->nombre.'</strong> creado');
     }
@@ -88,21 +101,33 @@ class UsuariosController extends Controller
      * Actualizar un elemento en la bbdd
      *
      * @param  \App\Http\Requests\UsuariosRequest  $request
-     * @param  int  $id
+     * @param  string  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function actualizar(UsuariosRequest $request, $id)
+    public function actualizar(UsuariosRequest $request, $usuario)
     {
-        $row = Usuarios::findOrFail($id);
+        $row = Usuarios::findOrFail($usuario);
 
-        Usuario::where('id', $row->id)->update([
-            'nombre' => $request->nombre,
+        Usuario::where('usuario', $row->usuario)->update([
+            'usuario' => $request->usuario,
             'email' => $request->email,
             'biografia' => $request->biografia,
             'password' => ($request->cambiar_clave) ? Hash::make($request->password) : $row->password,
-            'admin' => ($request->usuarios) ? 1 : 0,
-            'activo' => ($request->noticias) ? 1 : 0,
+            'admin' => ($request->usuarios) ? 1 : 0
+
         ]);
+
+        //Imagen
+        if ($request->hasFile('imagen')) {
+            $archivo = $request->file('imagen');
+            $nombre = $archivo->getClientOriginalExtension();
+            $archivo->move(public_path()."/img/", $nombre);
+            Usuarios::where('id', $row->usuario)->update(['imagen' => $nombre]);
+            $texto = " e imagen subida.";
+        }
+        else{
+            $texto = ".";
+        }
 
         return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->nombre.'</strong> guardado');
     }
@@ -110,18 +135,18 @@ class UsuariosController extends Controller
     /**
      * Activar o desactivar elemento.
      *
-     * @param  int  $id
+     * @param  string  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function activar($id)
+    public function activar($usuario)
     {
-        $row = Usuarios::findOrFail($id);
+        $row = Usuarios::findOrFail($usuario);
         $valor = ($row->activo) ? 0 : 1;
         $texto = ($row->activo) ? "desactivado" : "activado";
 
-        Usuarios::where('id', $row->id)->update(['activo' => $valor]);
+        Usuarios::where('usuario', $row->usuario)->update(['activo' => $valor]);
 
-        return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$row->name.'</strong> '.$texto.'.');
+        return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$row->usuario.'</strong> '.$texto.'.');
     }
 
     /**
@@ -130,12 +155,12 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function borrar($id)
+    public function borrar($usuario)
     {
-        $row = Usuarios::findOrFail($id);
+        $row = Usuarios::findOrFail($usuario);
 
-        Usuarios::destroy($row->id);
+        Usuarios::destroy($row->usuario);
 
-        return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$row->nombre.'</strong> borrado');
+        return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$row->usuario.'</strong> borrado');
     }
 }

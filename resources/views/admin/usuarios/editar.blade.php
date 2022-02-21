@@ -1,28 +1,18 @@
 @extends('layouts.admin')
 
 @section('content')
-
     <h3>
         <a href="{{ route("admin") }}" title="Inicio">Inicio</a> <span>| </span>
         <a href="{{ url("admin/usuarios") }}" title="Usuarios">Usuarios</a> <span>| </span>
-        @if ($row->id)
-            <span>Editar {{ $row->nombre }}</span>
+        @if ($row->usuario)
+            <span>Editar {{ $row->usuario }}</span>
         @else
             <span>Nuevo usuario</span>
         @endif
     </h3>
-
-
+    <div class="card admin" style="margin-top:10px;width:1550px;height: 1040px">
     <div class="col m12 l6 center-align">
-        <div class="file-field input-field">
-            <div class="btn">
-                <span>Imagen</span>
-                <input type="file" name="imagen">
-            </div>
-            <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
-            </div>
-        </div>
+
         @if ($row->imagen)
             {{ Html::image('img/'.$row->imagen, $row->titulo, ['class' => 'responsive-img']) }}
         @endif
@@ -30,27 +20,29 @@
 
 
     <div class="row">
-        @php $accion = ($row->id) ? "actualizar/".$row->id : "guardar" @endphp
+        @php $accion = ($row->usuario) ? "actualizar/".$row->usuario : "guardar" @endphp
         <form class="col m12 l6" method="POST" action="{{ url("admin/usuarios/".$accion) }}">
             @csrf
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s10" style="padding-left: 30px">
                     <input id="usuario" type="text" name="usuario" value="{{ $row->usuario }}">
                     <label for="usuario">Usuario</label>
                 </div>
-                <div class="input-field col s12">
+                <div class="input-field col s10" style="padding-left: 30px">
                     <input id="email" type="text" name="email" value="{{ $row->email }}">
                     <label for="email">E-mail</label>
                 </div>
-
-                <textarea name="biografia" id="biografia" style="width: 80rem; height: 15rem">{{ $row->biografia }}</textarea>
-
-                @php $clase = ($row->id) ? "hide" : "" @endphp
+                <div class="input-field col s10" style="padding-left: 30px">
+                    <br>
+                <label for="biografia">Biografia</label>
+                <textarea name="biografia" id="biografia" style="width: 45rem; height: 15rem">{{ $row->biografia }}</textarea>
+                </div>
+                @php $clase = ($row->usuario) ? "hide" : "" @endphp
                 <div class="input-field col s12 {{ $clase }}" id="password">
                     <input id="password" type="password" name="password" value="">
                     <label for="password">Contraseña</label>
                 </div>
-                @if ($row->id)
+                @if ($row->usuario)
                     <p>
                         <label for="cambiar_clave">
                             <input id="cambiar_clave" name="cambiar_clave" type="checkbox">
@@ -70,6 +62,17 @@
                     </label>
                 </p>
 
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Imagen</span>
+                        <input type="file" name="imagen">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+
+
                 <div class="input-field col s12">
                     <a href="{{ url("admin/usuarios") }}" title="Volver">
                         <button class="btn waves-effect waves-light" type="button">Volver
@@ -81,6 +84,9 @@
                     </button>
                 </div>
             </div>
+
         </form>
+
+    </div>
     </div>
 @endsection

@@ -3,6 +3,7 @@
 @section('content')
     <!--     background-image: url(http://3.143.248.187/proyecto_final_dam-daw/public/img/fondo_iniciarSe.png); -->
 
+
     <h3>
         <a href="{{ route("admin") }}" title="Inicio">Inicio</a> <span>| Usuarios</span>
     </h3>
@@ -35,7 +36,7 @@
                             $fechahoy = date('Y-m-d', time());
                         @endphp
                         @if($fechahoy==$row->fecha_registro)
-                            <span style="float:right;color:red">Nuevo</span>s
+                            <span style="float:right;color:red">Nuevo</span>
                         @endif
                         <div class="card-content">
                             @php
