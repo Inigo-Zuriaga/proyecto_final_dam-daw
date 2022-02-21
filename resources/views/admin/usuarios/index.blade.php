@@ -31,7 +31,11 @@
             <article class="col s12 l6" style="width: 50%">
                 <div class="card horizontal  sticky-action admin">
                     <div class="card-stacked">
-                        @if($row->fecha_registro==null)
+                        @php
+                            $fechahoy = date('d', time());
+                            $fechausuario = substr($row->fecha_registro,8,9);
+                        @endphp
+                        @if($fechausuario<$fechahoy)
                             <span style="float:right;color:red">Nuevo</span>
                         @endif
                         <div class="card-content">
