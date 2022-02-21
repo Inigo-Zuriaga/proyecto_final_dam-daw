@@ -273,6 +273,10 @@ button.btjugar{
 .paginado nav{
     margin-top: 2rem;
     line-height: normal;
+    width: 10%;
+    float: right;
+    margin-right: 235px;
+    margin-bottom: 10px;
 }
 
 .pagination li{

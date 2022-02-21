@@ -4,7 +4,7 @@
 
     @foreach ($rowset as $row)
         <div class="card admin" style="height: 560px">
-            <h2>{{Auth::user()->usuario}}</h2>
+            <h2>{{$row->usuario}}</h2>
             @if($row->imagen==null)
                 <i class="grey-text material-icons large">person</i>
             @else
@@ -42,25 +42,25 @@
                     <h3>Datos gameplay</h3>
                     @if ($row->frutas=='') no tienes datos
                     @else
-                    <table class="striped centered">
-                        <thead>
-                        <tr>
-                            <th>Frutas</th>
-                            <th>Enemigos</th>
-                            <th>Número de partidas</th>
-                            <th>Record</th>
-                            <th>Fecha record</th>
-                        </tr>
-                        </thead>
-                        <tr>
-                            <td>{{ $row->frutas  }}</td>
-                            <td>{{ $row->enemigos  }}</td>
-                            <td>{{ $row-> numero_partidas }}</td>
-                            <td>{{ $row->record  }}m</td>
-                            <td class="">{{ $row->fecha_record  }}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                        <table class="striped centered">
+                            <thead>
+                            <tr>
+                                <th>Frutas</th>
+                                <th>Enemigos</th>
+                                <th>Número de partidas</th>
+                                <th>Record</th>
+                                <th>Fecha record</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>{{ $row->frutas  }}</td>
+                                <td>{{ $row->enemigos  }}</td>
+                                <td>{{ $row-> numero_partidas }}</td>
+                                <td>{{ $row->record  }}m</td>
+                                <td class="">{{ $row->fecha_record  }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     @endif
                 </div>
             </div>

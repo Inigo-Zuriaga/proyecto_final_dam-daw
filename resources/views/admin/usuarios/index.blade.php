@@ -30,7 +30,7 @@
         @foreach ($rowset as $row)
             <article class="col s12 l6" style="width: 50%">
                 <div class="card horizontal  sticky-action admin">
-                    <div class="card-stacked">s
+                    <div class="card-stacked">
                         @php
                             $fechahoy = date('Y-m-d', time());
                         @endphp

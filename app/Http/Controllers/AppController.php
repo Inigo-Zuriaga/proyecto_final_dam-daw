@@ -47,8 +47,6 @@ class AppController extends Controller
         //Obtengo los datos a mostrar en el listado de datos
         $rowset = Datos::orderBy('record', 'ASC')->paginate(10,['*'],'pagina',$pagina);
 
-
-
         return view('app.clasificacion',[
             'rowset' => $rowset
 
@@ -158,6 +156,22 @@ class AppController extends Controller
         return view('api.leer',[
             'rowset' => $rowset,
         ]);
+    }
+
+
+    public function jugador($slug){
+
+        $rowset = Usuarios::
+        join('datos','datos.usuario', '=', 'usuarios.usuario')
+            ->where('usuarios.usuario', $slug)
+            ->get();
+
+        if($rowset=="[]"){
+            $rowset = Usuarios::where('usuario',$slug)->get();
+        }
+        return view('app.jugador',['rowset' => $rowset,]);
+
+
     }
 
 

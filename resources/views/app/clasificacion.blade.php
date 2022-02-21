@@ -25,8 +25,12 @@
                         <td>{{ $row->enemigos  }}</td>
                         <td>{{ $row-> numero_partidas }}</td>
                         <td>{{ $row->record  }}m</td>
-                        <td class="">{{ $row->fecha_record  }}</td>
-                        <td><i class="material-icons">open_in_new</i></td>
+                        <td>{{ $row->fecha_record  }}</td>
+                        <td>
+                            <a href="{{ url('/jugador/'.$row->usuario) }}" title={{ $row->usuario }}>
+                                <i class="material-icons">open_in_new</i>
+                            </a>
+                        </td>
                     </tr>
         @endforeach
         </tbody>
