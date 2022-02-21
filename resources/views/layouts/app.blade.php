@@ -45,7 +45,7 @@
                     <a href="{{ route('foro') }}" title="Foro">Foro</a>
                 </li>
                 <li>
-                    <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+                    <a href="{{url('admin/clasificacion') }}" title="Clasificación">Clasificación</a>
                 </li>
                 <li>
                     <a href="{{ url('admin/usuarios') }}" title="Usuarios">Usuarios</a>
@@ -61,7 +61,7 @@
                     <a href="{{ route('foro') }}" title="Foro">Foro</a>
                 </li>
                 <li>
-                    <a href="{{ route('clasificacion') }}" title="Clasificación">Clasificación</a>
+                    <a href="{{ url('clasificacion') }}" title="Clasificación">Clasificación</a>
                 </li>
                 <li>
                     <a href="{{ route('equipo') }}" title="Equipo">Equipo</a>

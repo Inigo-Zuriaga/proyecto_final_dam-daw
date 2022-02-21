@@ -5,6 +5,7 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\DatosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::get('jugador/{id}', [AppController::class, 'jugador'])->name('jugador');
 
 //BACK-END
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
+
 //Usuarios
 Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:admin');
 Route::get('admin/usuarios/activar/{id}', [UsuariosController::class, 'activar'])->middleware('role:admin');
@@ -38,6 +40,12 @@ Route::get('admin/usuarios/editar/{usuario}', [UsuariosController::class, 'edita
 Route::get('admin/usuarios/crear', [UsuariosController::class, 'crear'])->middleware('role:usuarios');
 Route::post('admin/usuarios/guardar', [UsuariosController::class, 'guardar'])->middleware('role:usuarios');
 Route::post('admin/usuarios/actualizar/{id}', [UsuariosController::class, 'actualizar'])->middleware('role:usuarios');
+
+//Partidas
+Route::get('admin/clasificacion', [DatosController::class, 'clasificacion'])->name('clasificacion');
+Route::get('admin/clasificacion/activar/{usuario}', [DatosController::class, 'activar'])->middleware('role:admin');
+Route::get('admin/clasificacion/visible/{usuario}', [DatosController::class, 'visible'])->middleware('role:admin');
+Route::get('admin/clasificacion/borrar/{usuario}', [DatosController::class, 'borrar'])->middleware('role:admin');
 
 //Auth
 Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');

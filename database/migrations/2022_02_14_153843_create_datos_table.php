@@ -26,6 +26,8 @@ class CreateDatosTable extends Migration
             $table->dateTime('fecha_record')->nullable();
             $table->integer('record')->nullable(false)->default(0);
             $table->tinyInteger('numero_partidas',)->nullable(false)->default(0);
+            $table->tinyInteger('activo',)->default(1);
+            $table->tinyInteger('visible',)->default(1);
 
             //Columnas created_at y updated_at
             $table->timestamps();

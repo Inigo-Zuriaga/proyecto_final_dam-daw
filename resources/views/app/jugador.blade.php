@@ -27,10 +27,6 @@
                     </div>
                     <a class="card-title activator">Más Info</a>
                 </div>
-                <form method="POST" action="{{ route('salir') }}">
-                    @csrf
-                    <a onclick="$(this).closest('form').submit()" title="Salir" class="salir">Cerrar Sesión</a>
-                </form>
             </div>
             <div class="card-reveal" style="background-color: black;">
                 <span class="card-title  text-darken-4"><i class="material-icons right">close</i></span>

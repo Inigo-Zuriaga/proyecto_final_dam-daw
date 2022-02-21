@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Datos extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'usuario', 'frutas', 'enemigos', 'ult_distancia', 'fecha_record', 'record', 'numero_partidas','activo','visible'
+    ];
 }

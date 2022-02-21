@@ -4,7 +4,7 @@
 
     @foreach ($rowset as $row)
         <div class="card admin" style="height: 560px">
-            <h2>{{Auth::user()->usuario}}</h2>
+            <h2>{{$row->usuario}}</h2>
             @if($row->imagen==null)
                 <i class="grey-text material-icons large">person</i>
             @else
