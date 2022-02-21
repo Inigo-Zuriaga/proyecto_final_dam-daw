@@ -49,7 +49,7 @@ class AuthController extends Controller
         $data = $request->all();
 
         $usuario = Usuarios::create([
-            'usuario' => $data['usuario']."hola",
+            'usuario' => $data['usuario'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'fecha_registro' => date('Y-m-d h:i:s', time()),
