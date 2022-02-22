@@ -29,7 +29,7 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'El email no está registrado.',
+            'email' => 'El email no está registrado.'
         ]);
     }
 

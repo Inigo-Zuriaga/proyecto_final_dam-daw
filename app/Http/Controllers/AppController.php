@@ -45,7 +45,7 @@ class AppController extends Controller
         $pagina = ($request->pagina) ? $request->pagina : 1;
 
         //Obtengo los datos a mostrar en el listado de datos
-        $rowset = Datos::orderBy('record', 'ASC')->paginate(10,['*'],'pagina',$pagina);
+        $rowset = Datos::orderBy('record', 'DESC')->paginate(10,['*'],'pagina',$pagina);
 
         return view('app.clasificacion',[
             'rowset' => $rowset

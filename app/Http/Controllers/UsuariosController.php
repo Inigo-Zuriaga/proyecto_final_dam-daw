@@ -105,7 +105,7 @@ class UsuariosController extends Controller
             'email' => $request->email,
             'biografia' => $request->biografia,
             'password' => ($request->cambiar_clave) ? Hash::make($request->password) : $row->password,
-            'admin' => ($request->usuarios) ? 1 : 0
+            'admin' => ($request->admin) ? 1 : 0
         ]);
 
         //Imagen
@@ -117,7 +117,7 @@ class UsuariosController extends Controller
             $texto = public_path();
         }
         else{
-            $texto = "mal";
+            $texto = "";
         }
         return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->usuario.'</strong> actualizado'.$texto);
     }
@@ -142,7 +142,7 @@ class UsuariosController extends Controller
     /**
      * Borrar elemento.
      *
-     * @param  int  $id
+     * @param  string  $usuario
      * @return \Illuminate\Http\Response
      */
     public function borrar($usuario)

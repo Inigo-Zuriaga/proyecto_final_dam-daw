@@ -18,12 +18,13 @@ class AdminController extends Controller
     public function index()
     {
        $usuario = Auth::user()->usuario;
-
+    //relaciono las dos tablas por la columna usuario  y junto los datos en una misma variable
         $rowset = Usuarios::
             join('datos','datos.usuario', '=', 'usuarios.usuario')
             ->where('usuarios.usuario', $usuario)
             ->get();
 
+        //si no hay relacion solo envia la tabla usuarios
         if($rowset=="[]"){
             $rowset = Usuarios::where('usuario',$usuario)->get();
         }
