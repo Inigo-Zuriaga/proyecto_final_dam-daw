@@ -58,7 +58,7 @@ class UsuariosController extends Controller
      */
     public function guardar(UsuariosRequest $request)
     {
-        Usuarios::create([
+        $row = Usuarios::create([
             'usuario' => $request->usuario,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -66,13 +66,12 @@ class UsuariosController extends Controller
             'fecha_registro' => date('Y-m-d', time()),
             'admin' => ($request->admin) ? 1 : 0,
             'slug' => Funciones::getSlug($request->usuario)
-
         ]);
 
         //Imagen
         if ($request->hasFile('imagen')) {
             $archivo = $request->file('imagen');
-            $nombre = $archivo->getClientOriginalExtension();
+            $nombre = $archivo->getClientOriginalName();
             $archivo->move(public_path()."/img/", $nombre);
             Usuarios::where('id', $row->id)->update(['imagen' => $nombre]);
             $texto = " e imagen subida.";
@@ -112,7 +111,7 @@ class UsuariosController extends Controller
         //Imagen
         if ($request->hasFile('imagen')) {
             $archivo = $request->file('imagen');
-            $nombre = $archivo->getClientOriginalExtension();
+            $nombre = $archivo->getClientOriginalName();
             $archivo->move(public_path()."/img/", $nombre);
             Usuarios::where('usuario', $row->usuario)->update(['imagen' => $nombre]);
             $texto = public_path();

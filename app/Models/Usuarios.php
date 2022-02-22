@@ -30,7 +30,8 @@ class Usuarios extends Authenticatable
         'fecha_registro',
         'slug',
         'biografia',
-        'admin'
+        'admin',
+        'imagen',
     ];
 
     /**

@@ -16,7 +16,7 @@
     </div>
     <div class="row">
         @php $accion = ($row->id) ? "actualizar/".$row->id : "guardar" @endphp
-        <form class="col m12 l6" method="POST" action="{{ url("admin/usuarios/".$accion) }}">
+        <form class="col m12 l6" method="POST" action="{{ url("admin/usuarios/".$accion) }}" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="input-field col s10" style="padding-left: 30px">

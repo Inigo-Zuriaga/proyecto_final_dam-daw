@@ -22,6 +22,38 @@ class ApiController
     }
 
     public function añadirPartida(Request $request){
-
+        Datos::create([
+            'usuario' => $request->usuario,
+            'frutas' => $request->frutas,
+            'enemigos' => $request->enemigos,
+            'ult_distancia' => $request->ult_distancia,
+            'numero_partidas' => $request->numero_partidas,
+        ]);
     }
+
+    public function verClasificacion(){
+        $rowset = Datos::orderBy('record', 'ASC')->limit(5)->get();
+
+        foreach ($rowset as $row){
+            $datos[] = [
+                'usuario' => $row->usuario,
+                'frutas' => $row->frutas,
+                'enemigos' => $row->enemigos,
+                'numero_partidas' => $row->numero_partidas,
+                'record' => $row->record,
+                'fecha_record' => date("d/m/Y", strtotime($row->fecha_record)),
+            ];
+        }
+
+        //Devuelvo JSON
+        return response()->json(
+            $datos, //Array de objetos
+            200, //Tipo de respuesta
+            [], //Headers
+            //dejaro bonito             barras                   tildes
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE //Opciones de escape
+        );
+    }
+
+
 }

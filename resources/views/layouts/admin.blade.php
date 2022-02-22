@@ -42,9 +42,6 @@
                 <a href="{{ route('home') }}" title="Inicio">Inicio</a>
             </li>
             <li>
-                <a href="{{ route('foro') }}" title="Foro">Foro</a>
-            </li>
-            <li>
                 <a href="{{ url('admin/clasificacion') }}" title="Clasificación">Clasificación</a>
             </li>
             <li>
@@ -60,8 +57,6 @@
                     <a href="{{ route('comojugar') }}" title="Como jugar">Cómo jugar</a>
                 </li>
                 <li>
-                    <a href="{{ route('foro') }}" title="Foro">Foro</a>
-                </li>
                 <li>
                     <a href="{{ url('clasificacion') }}" title="Clasificación">Clasificación</a>
                 </li>

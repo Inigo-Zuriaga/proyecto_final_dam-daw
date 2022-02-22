@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\DatosController;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,12 @@ Route::get('mostrardatos', [AppController::class, 'mostrardatos'])->name('mostra
 Route::get('mostrarusuarios', [AppController::class, 'mostrarusuarios'])->name('mostrarusuarios');
 Route::get('leer', [AppController::class, 'leer'])->name('leer');
 
-
+//Api
 Route::post('añadirPartida', [ApiController::class, 'añadirPartida'])->name('añadirPartida');
+Route::get('comprobarUsuario', [ApiController::class, 'comprobarUsuario'])->name('comprobarUsuario');
+Route::get('verClasificacion', [ApiController::class, 'verClasificacion'])->name('verClasificacion');
+
+
+//Ruta por defecto (si no encuentra otra antes)
+Route::any('{query}', function() { return redirect('/'); })->where('query', '.*');
 
