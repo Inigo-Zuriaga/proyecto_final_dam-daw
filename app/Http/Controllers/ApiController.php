@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Datos;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ApiController
 {
     public function comprobarUsuario (Request $request) {
-        //Esto se hace mediante POST
+
         $email = $request->email;
         $password = $request->password;
 
@@ -21,14 +23,26 @@ class ApiController
         }
     }
 
-    public function añadirPartida(Request $request){
-        Datos::create([
+    public function verUsuario(){
+        return view('api.partida');
+    }
+
+    public function anadirPartida(Request $request){
+        /*Datos::create([
             'usuario' => $request->usuario,
             'frutas' => $request->frutas,
             'enemigos' => $request->enemigos,
             'ult_distancia' => $request->ult_distancia,
             'numero_partidas' => $request->numero_partidas,
+        ]);*/
+        Datos::create([
+            'usuario' => 'pepe',
+            'frutas' => '25',
+            'enemigos' => '10',
+            'ult_distancia' => '50',
+            'numero_partidas' => '10',
         ]);
+        echo "partida añadida";
     }
 
     public function verClasificacion(){

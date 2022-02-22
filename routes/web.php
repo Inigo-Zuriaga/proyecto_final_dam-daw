@@ -61,11 +61,13 @@ Route::get('mostrarusuarios', [AppController::class, 'mostrarusuarios'])->name('
 Route::get('leer', [AppController::class, 'leer'])->name('leer');
 
 //Api
-Route::post('añadirPartida', [ApiController::class, 'añadirPartida'])->name('añadirPartida');
-Route::get('comprobarUsuario', [ApiController::class, 'comprobarUsuario'])->name('comprobarUsuario');
+Route::get('anadirPartida', [ApiController::class, 'anadirPartida'])->name('anadirPartida');
 Route::get('verClasificacion', [ApiController::class, 'verClasificacion'])->name('verClasificacion');
+Route::get('verUsuario', [ApiController::class, 'verUsuario'])->name('verUsuario');
+Route::post('comprobarUsuario', [ApiController::class, 'comprobarUsuario'])->name('comprobarUsuario');
+
 
 
 //Ruta por defecto (si no encuentra otra antes)
-Route::any('{query}', function() { return redirect('/'); })->where('query', '.*');
+//Route::any('{query}', function() { return redirect('/'); })->where('query', '.*');
 
