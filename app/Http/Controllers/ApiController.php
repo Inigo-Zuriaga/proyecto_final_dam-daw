@@ -27,14 +27,11 @@ class ApiController
         return view('api.partida');
     }
 
-    public function anadirPartida(Request $request){
-        /*Datos::create([
-            'usuario' => $request->usuario,
-            'frutas' => $request->frutas,
-            'enemigos' => $request->enemigos,
-            'ult_distancia' => $request->ult_distancia,
-            'numero_partidas' => $request->numero_partidas,
-        ]);*/
+    public function verPartida(){
+        return view('api.crearPartida');
+    }
+
+    public function crearPartida(){
         Datos::create([
             'usuario' => 'pepe',
             'frutas' => '25',
