@@ -149,7 +149,7 @@ class UsuariosController extends Controller
     {
         $row = Usuarios::findOrFail($usuario);
 
-        Usuarios::destroy($row->usuario);
+        Usuarios::destroy($row->id);
 
         return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$row->usuario.'</strong> borrado');
     }

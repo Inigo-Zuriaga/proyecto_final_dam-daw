@@ -9,10 +9,11 @@
 </head>
 <body>
 <form method="GET" action="http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/index.php/crearPartida">
-    <label for="usuario">usuario</label>
-    <input id="usuario" type="text" name="usuario" value="">
+    <label for="correo">correo</label>
+    <input id="correo" type="text" name="correo" value="">
     <label for="frutas">frutas</label>
     <input id="frutas" type="text" name="frutas" value="">
+
     <!--<label for="enemigos">enemigos</label>
     <input id="enemigos" type="text" name="enemigos" value="">
     <label for="ult_distancia">ult_distancia</label>

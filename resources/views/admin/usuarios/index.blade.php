@@ -81,7 +81,7 @@
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Borrar usuario<i class="material-icons right">close</i></span>
                         <p>
-                            ¿Está seguro de que quiere borrar al usuario<strong>{{ $row->nombre }}</strong>?<br>
+                            ¿Está seguro de que quiere borrar al usuario<strong>@php echo $row->usuario @endphp</strong>?<br>
                             Esta acción no se puede deshacer.
                         </p>
                         <a href="{{ url("admin/usuarios/borrar/".$row->id) }}" title="Borrar">

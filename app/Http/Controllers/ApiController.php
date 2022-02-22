@@ -31,15 +31,18 @@ class ApiController
         return view('api.crearPartida');
     }
 
-    public function crearPartida(){
-        Datos::create([
-            'usuario' => 'pepe',
-            'frutas' => '25',
-            'enemigos' => '10',
-            'ult_distancia' => '50',
-            'numero_partidas' => '10',
-        ]);
-        echo "partida añadida";
+    public function crearPartida(Request $request){
+
+        $row = Usuarios::where('correo',$request->correo);
+        if(!$row)echo "mal";
+        else {
+            /*Datos::create([
+                'usuario' => $row->usuario,
+                'frutas' => $request->frutas,
+            ]);*/
+            echo $request->correo;
+        }
+
     }
 
     public function verClasificacion(){

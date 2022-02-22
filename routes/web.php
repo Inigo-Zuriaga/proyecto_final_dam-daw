@@ -36,7 +36,7 @@ Route::get('admin', [AdminController::class, 'index'])->name('admin');
 //Usuarios
 Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:admin');
 Route::get('admin/usuarios/activar/{id}', [UsuariosController::class, 'activar'])->middleware('role:admin');
-Route::get('admin/usuarios/borrar/{id}', [UsuariosController::class, 'borrar'])->middleware('role:admin');
+Route::get('admin/usuarios/borrar/{usuario}', [UsuariosController::class, 'borrar'])->middleware('role:admin');
 Route::get('admin/usuarios/editar/{usuario}', [UsuariosController::class, 'editar'])->middleware('role:admin');
 Route::get('admin/usuarios/crear', [UsuariosController::class, 'crear'])->middleware('role:admin');
 Route::post('admin/usuarios/guardar', [UsuariosController::class, 'guardar'])->middleware('role:admin');
@@ -70,5 +70,5 @@ Route::get('crearPartida', [ApiController::class, 'crearPartida'])->name('crearP
 
 
 //Ruta por defecto (si no encuentra otra antes)
-Route::any('{query}', function() { return redirect('/'); })->where('query', '.*');
+//Route::any('{query}', function() { return redirect('/'); })->where('query', '.*');
 
