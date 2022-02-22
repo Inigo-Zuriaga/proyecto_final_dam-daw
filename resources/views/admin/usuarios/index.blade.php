@@ -53,9 +53,8 @@
                                 <strong>Email: </strong>{{ ($row->email) }}<br><?php
                                 if($imagen=='person'){  ?>
                                 <i class="material-icons medium">person</i> <?php
-
                                 }else{
-                                ?> <div style="padding-bottom: 130px"><img style="width: 80%; height: 80%" src="http://3.143.248.187/proyecto_final_dam-daw/public/img/<?php echo $row->imagen ?>" alt=""></div> <?php
+                                ?> <div style="padding-bottom: 130px">{{ Html::image('img/'.$row->imagen, $row->titulo,['style'=>'width: 80%; height: 80%']) }}</div> <?php
                                 }
                                 ?>
                             </div>
