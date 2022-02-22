@@ -39,7 +39,7 @@ Route::get('admin/usuarios/borrar/{id}', [UsuariosController::class, 'borrar'])-
 Route::get('admin/usuarios/editar/{usuario}', [UsuariosController::class, 'editar'])->middleware('role:admin');
 Route::get('admin/usuarios/crear', [UsuariosController::class, 'crear'])->middleware('role:admin');
 Route::post('admin/usuarios/guardar', [UsuariosController::class, 'guardar'])->middleware('role:admin');
-Route::post('admin/usuarios/actualizar/{usuario}', [UsuariosController::class, 'actualizar'])->middleware('role:admin');
+Route::post('admin/usuarios/actualizar/{id}', [UsuariosController::class, 'actualizar'])->middleware('role:admin');
 
 //Partidas
 Route::get('admin/clasificacion', [DatosController::class, 'clasificacion'])->name('clasificacion');

@@ -2,8 +2,6 @@
 <!--UWU-->
 @section('content')
     <h3>
-        <a href="{{ route("admin") }}" title="Inicio">Inicio</a> <span>| </span>
-        <a href="{{ url("admin/usuarios") }}" title="Usuarios">Usuarios</a> <span>| </span>
         @if ($row->usuario)
             <span>Editar {{ $row->usuario }}</span>
         @else
@@ -12,15 +10,12 @@
     </h3>
     <div class="card admin" style="margin-top:10px;width:1550px;height: 1040px">
     <div class="col m12 l6 center-align">
-
         @if ($row->imagen)
             {{ Html::image('img/'.$row->imagen, $row->titulo, ['class' => 'responsive-img']) }}
         @endif
     </div>
-
-
     <div class="row">
-        @php $accion = ($row->usuario) ? "actualizar/".$row->usuario : "guardar" @endphp
+        @php $accion = ($row->id) ? "actualizar/".$row->id : "guardar" @endphp
         <form class="col m12 l6" method="POST" action="{{ url("admin/usuarios/".$accion) }}">
             @csrf
             <div class="row">
@@ -56,12 +51,11 @@
             <div class="row">
                 <p>Permisos</p>
                 <p>
-                    <label for="noticias">
-                        <input id="noticias" name="Admin" type="checkbox" {{ ($row->admin == 1) ? "checked" : "" }}>
+                    <label for="admin">
+                        <input id="admin" name="admin" type="checkbox" {{ ($row->admin == 1) ? "checked" : "" }}>
                         <span>Admin</span>
                     </label>
                 </p>
-
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Imagen</span>
@@ -71,8 +65,6 @@
                         <input class="file-path validate" type="text">
                     </div>
                 </div>
-
-
                 <div class="input-field col s12">
                     <a href="{{ url("admin/usuarios") }}" title="Volver">
                         <button class="btn waves-effect waves-light" type="button">Volver
@@ -84,9 +76,6 @@
                     </button>
                 </div>
             </div>
-
         </form>
-
-    </div>
     </div>
 @endsection

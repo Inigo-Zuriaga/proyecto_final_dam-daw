@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Funciones;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -62,8 +63,10 @@ class UsuariosController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'biografia' => $request->biografia,
-            //'fecha' => \DateTime::createFromFormat("d-m-Y", $request->fecha_registro)->format("Y-m-d H:i:s"),
+            'fecha_registro' => date('Y-m-d', time()),
             'admin' => ($request->admin) ? 1 : 0,
+            'slug' => Funciones::getSlug($request->usuario)
+
         ]);
 
         //Imagen
@@ -71,7 +74,7 @@ class UsuariosController extends Controller
             $archivo = $request->file('imagen');
             $nombre = $archivo->getClientOriginalExtension();
             $archivo->move(public_path()."/img/", $nombre);
-            Usuarios::where('id', $row->usuario)->update(['imagen' => $nombre]);
+            Usuarios::where('id', $row->id)->update(['imagen' => $nombre]);
             $texto = " e imagen subida.";
         }
         else{
@@ -81,12 +84,6 @@ class UsuariosController extends Controller
         return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->nombre.'</strong> creado');
     }
 
-    /**
-     * Mostrar el formulario para editar un elemento
-     *
-     * @param  string  $usuario
-     * @return \Illuminate\Http\Response
-     */
     public function editar($usuario)
     {
         //Obtengo el usuario o muestro error
@@ -100,21 +97,16 @@ class UsuariosController extends Controller
     /**
      * Actualizar un elemento en la bbdd
      *
-     * @param  \App\Http\Requests\UsuariosRequest  $request
-     * @param  string  $usuario
-     * @return \Illuminate\Http\Response
      */
-    public function actualizar(UsuariosRequest $request, $usuario)
+    public function actualizar(UsuariosRequest $request, $id)
     {
-        $row = Usuarios::findOrFail($usuario);
-
-        Usuario::where('usuario', $row->usuario)->update([
+        $row = Usuarios::findOrFail($id);
+        Usuarios::where('id', $row->id)->update([
             'usuario' => $request->usuario,
             'email' => $request->email,
             'biografia' => $request->biografia,
             'password' => ($request->cambiar_clave) ? Hash::make($request->password) : $row->password,
             'admin' => ($request->usuarios) ? 1 : 0
-
         ]);
 
         //Imagen
@@ -122,14 +114,13 @@ class UsuariosController extends Controller
             $archivo = $request->file('imagen');
             $nombre = $archivo->getClientOriginalExtension();
             $archivo->move(public_path()."/img/", $nombre);
-            Usuarios::where('id', $row->usuario)->update(['imagen' => $nombre]);
-            $texto = " e imagen subida.";
+            Usuarios::where('usuario', $row->usuario)->update(['imagen' => $nombre]);
+            $texto = public_path();
         }
         else{
-            $texto = ".";
+            $texto = "mal";
         }
-
-        return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->nombre.'</strong> guardado');
+        return redirect('admin/usuarios')->with('success', 'Usuario <strong>'.$request->usuario.'</strong> actualizado'.$texto);
     }
 
     /**
