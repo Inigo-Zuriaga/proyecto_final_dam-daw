@@ -85,6 +85,7 @@ class UsuariosController extends Controller
 
     public function editar($usuario)
     {
+        //select para localizar al usuario y cargo la vista
         //Obtengo el usuario o muestro error
         $row = Usuarios::where('usuario', $usuario)->firstOrFail();
 

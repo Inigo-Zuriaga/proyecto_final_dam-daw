@@ -33,7 +33,7 @@ Route::get('jugador/{id}', [AppController::class, 'jugador'])->name('jugador');
 //BACK-END
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
 
-//Usuarios
+//Usuarios middleware consulta si el la clomuna admin tiene 1
 Route::get('admin/usuarios', [UsuariosController::class, 'index'])->middleware('role:admin');
 Route::get('admin/usuarios/activar/{id}', [UsuariosController::class, 'activar'])->middleware('role:admin');
 Route::get('admin/usuarios/borrar/{usuario}', [UsuariosController::class, 'borrar'])->middleware('role:admin');

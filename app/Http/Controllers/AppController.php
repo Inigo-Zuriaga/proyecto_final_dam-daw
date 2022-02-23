@@ -57,7 +57,7 @@ class AppController extends Controller
 
     public function jugar()
     {
-        return view('app.equipo');
+        return view('app.jugar');
     }
 
     public function equipo()
