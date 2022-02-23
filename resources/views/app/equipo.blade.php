@@ -20,10 +20,10 @@
 <div class="card admin" style="background-color: #0000007a;">
     <div class="row" style="text-align: center">
         <h1>DAW</h1>
-        <div class="col s12 m3 l3" style="margin-left: 10%" >
+        <div class="col s12 m3 l3" style="margin-left: 25%" >
             <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
-                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
+                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crash.png" style="width: 80%;margin-left: 40px">
                 </div>
                 <div class="card-content">
                     <p>Pablo Horcajada Gonzalez</p>
@@ -34,25 +34,13 @@
         <div class="col s12 m3 l3" >
             <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
-                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
+                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crash.png" style="filter:hue-rotate(90deg);width: 80%; margin-left: 40px">
                 </div>
                 <div class="card-content">
                     <p>Iñigo Zuriaga Peña</p>
                 </div>
             </div>
         </div>
-
-        <div class="col s12 m3 l3" >
-            <div class="card" style="border-radius: 10px;">
-                <div class="card-image">
-                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
-                </div>
-                <div class="card-content">
-                    <p>Alejandro Pérez</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div class="row" style="text-align: center">
@@ -60,7 +48,7 @@
         <div class="col s12 m3 l3" style="margin-left: 25%" >
             <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
-                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%;margin-left: 40px">
+                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crash.png" style="filter:hue-rotate(980deg);width: 80%;margin-left: 40px">
                 </div>
                 <div class="card-content">
                     <p>Max Donoso Thomas de Carranza</p>
@@ -71,7 +59,7 @@
         <div class="col s12 m3 l3" >
             <div class="card" style="border-radius: 10px;">
                 <div class="card-image">
-                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crashbandicoot1.jpg" style="width: 80%; margin-left: 40px">
+                    <img src="http://3.143.248.187/proyecto_final_dam-daw/public/img/crash.png" style="filter:hue-rotate(180deg);width: 80%; margin-left: 40px">
                 </div>
                 <div class="card-content">
                     <p>Yago Mosquera Fernandez</p>
@@ -80,7 +68,7 @@
         </div>
     </div>
     </div>
-
+</div>
 
 
 @endsection
