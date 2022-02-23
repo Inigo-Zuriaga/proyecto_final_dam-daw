@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-<form method="GET" action="http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/index.php/crearPartida">
-    <label for="correo">correo</label>
-    <input id="correo" type="text" name="correo" value="">
+<form method="POST" action="http://35.181.8.108/2Eva/proyecto_final_dam-daw/public/index.php/crearPartida">
+    <label for="email">email</label>
+    <input id="email" type="email" name="email" value="">
     <label for="frutas">frutas</label>
     <input id="frutas" type="text" name="frutas" value="">
 

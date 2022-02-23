@@ -63,9 +63,9 @@ Route::get('leer', [AppController::class, 'leer'])->name('leer');
 //Api
 Route::get('verClasificacion', [ApiController::class, 'verClasificacion'])->name('verClasificacion');
 Route::get('verUsuario', [ApiController::class, 'verUsuario'])->name('verUsuario');
-Route::get('verPartida', [ApiController::class, 'verPartida'])->name('verPartida');
 Route::post('comprobarUsuario', [ApiController::class, 'comprobarUsuario'])->name('comprobarUsuario');
-Route::get('crearPartida', [ApiController::class, 'crearPartida'])->name('crearPartida');
+Route::get('verPartida', [ApiController::class, 'verPartida'])->name('verPartida');
+Route::post('crearPartida', [ApiController::class, 'crearPartida'])->name('crearPartida');
 
 
 

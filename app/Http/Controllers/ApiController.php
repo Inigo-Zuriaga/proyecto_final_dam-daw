@@ -33,20 +33,29 @@ class ApiController
 
     public function crearPartida(Request $request){
 
-        $row = Usuarios::where('correo',$request->correo);
-        if(!$row)echo "mal";
+        $row = Usuarios::where('email', $request->email)->first();
+
+        $datos = Datos::where('usuario', $row->usuario)->first();
+        if($datos){
+            Datos::where('usuario', $datos->usuario)->update([
+                'frutas' => $request->frutas,
+            ]);
+        }
         else {
-            /*Datos::create([
+            Datos::create([
                 'usuario' => $row->usuario,
                 'frutas' => $request->frutas,
-            ]);*/
-            echo $request->correo;
+                'recha_registro' => $request->fecha,
+            ]);
+            echo "partida añadida";
         }
+
+
 
     }
 
     public function verClasificacion(){
-        $rowset = Datos::orderBy('record', 'ASC')->limit(5)->get();
+        $rowset = Datos::orderBy('frutas', 'DESC')->limit(5)->get();
 
         foreach ($rowset as $row){
             $datos[] = [
